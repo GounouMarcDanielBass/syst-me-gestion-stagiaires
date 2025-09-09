@@ -295,10 +295,13 @@
     }
 
     .header-right {
+		@include breakpoint (max-md){
+			gap: 15px;
+		}
+
         .header-button {
             @include flex;
             gap: 0;
-
             .search-icon {
                 width: 50px;
                 height: 50px;
@@ -312,6 +315,10 @@
 
             .theme-btn {
                 padding: 19px 30px;
+
+				@include breakpoint (max-xxl){
+					display: none;
+				}
             }
         }
 
@@ -551,7 +558,7 @@
 		}
 
 		@include breakpoint (max-sm){
-			padding: 130px 60px;
+			padding: 100px 0 60px;
 		}
 
 		h1{
@@ -562,12 +569,8 @@
 			font-weight: 600;
 			text-transform: uppercase;
 
-			@include breakpoint(max-lg){
-				font-size: 42px;
-			}
-
 			@include breakpoint(max-sm){
-				font-size: 36px;
+				font-size: 42px;
 			}
 		}
 

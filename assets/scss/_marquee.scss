@@ -28,7 +28,20 @@
 			animation-play-state: paused;
 		}
 	}
-	@include breakpoint (max-xxl) {
+	@include breakpoint (max-lg) {
+		.comm {
+			gap: 20px;
+			.cmn-textslide {
+				font-size: 90px;
+				line-height: 100px;
+			}
+			img {
+				width: 70px;
+			}
+		}
+	}
+
+	@include breakpoint (max-sm) {
 		.comm {
 			gap: 20px;
 			.cmn-textslide {
@@ -37,35 +50,6 @@
 			}
 			img {
 				width: 70px;
-			}
-		}
-	}
-
-	@include breakpoint (max-lg) {
-		gap: 14px;
-		.comm {
-			gap: 14px;
-			.cmn-textslide {
-				font-size: 40px;
-				line-height: 55px;
-			}
-			img {
-				width: 50px;
-				object-fit: contain;
-			}
-		}
-	}
-
-	@include breakpoint (max-sm) {
-		.comm {
-			gap: 12px;
-			.cmn-textslide {
-				font-size: 24px;
-				line-height: 35px;
-			}
-			img {
-				width: 50px;
-				object-fit: contain;
 			}
 		}
 	}

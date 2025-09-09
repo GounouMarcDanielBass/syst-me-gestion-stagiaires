@@ -69,22 +69,20 @@
 
 //pagination default
 .swiper-dot {
-  text-align: center;
-
   .swiper-pagination-bullet {
-      width: 30px;
+      width: 40px;
       height: 8px;
       transition: 0.6s;
-      background-color: $white;
+      background-color: #2A2A2A;
       opacity: 1;
-      border-radius: 60px;
+      border-radius: 10px;
       position: relative;
   }
   .swiper-pagination-bullet.swiper-pagination-bullet-active {
       background-color: $theme-color;
       transition: 0.6s;
       position: relative;
-      width: 51px;
+      width: 40px;
   }
 
 }

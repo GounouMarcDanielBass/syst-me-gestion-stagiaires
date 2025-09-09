@@ -218,11 +218,19 @@
         h2 {
             font-size: 56px;
             font-weight: 600;
+
+            @include breakpoint (max-sm){
+                font-size: 45px;
+            }
         }
 
         h3 {
             font-size: 48px;
             font-weight: 700;
+
+            @include breakpoint (max-sm){
+                font-size: 40px;
+            }
         }
 
         .details-list-items {
@@ -230,6 +238,11 @@
             gap: 150px;
             margin-top: 50px;
             margin-bottom: 50px;
+
+            @include breakpoint (max-lg){
+                gap: 30px;
+                flex-wrap: wrap;
+            }
 
             ul {
                 li {
@@ -243,12 +256,16 @@
         }
     }
     
-
     .details-image {
         border-top: 1px solid $border-color;
         padding-top: 60px;
         margin-top: 60px;
         margin-bottom: 40px;
+
+        @include breakpoint (max-md){
+           padding-top: 30px;
+           margin-top: 30px;
+        }
 
         img {
             @include imgw;

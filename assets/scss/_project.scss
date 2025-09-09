@@ -249,6 +249,10 @@
         h2 {
             font-size: 56px;
             font-weight: 600;
+
+            @include breakpoint (max-sm){
+                font-size: 45px;
+            }
         }
     }
 
@@ -287,12 +291,20 @@
     .project-content-2 {
         h2 {
             font-size: 48px;
+
+            @include breakpoint (max-sm){
+                font-size: 40px;
+            }
         }
     }
 
     .project-details-content-3 {
         h2 {
             font-size: 40px;
+
+            @include breakpoint (max-sm){
+                font-size: 35px;
+            }
         }
 
         .details-list-items {
@@ -300,6 +312,11 @@
             gap: 100px;
             margin-top: 40px;
             margin-bottom: 40px;
+
+            @include breakpoint (max-xl){
+               flex-wrap: wrap;
+               gap: 30px;
+            }
 
             ul {
                 li {

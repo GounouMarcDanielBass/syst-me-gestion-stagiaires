@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
     <!--<< Header Area >>-->
     <head>
@@ -6,10 +6,10 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="gramentheme">
+        <meta name="author" content="wordpressriver">
         <meta name="description" content="Agznko - Creative Agency and Portfolio Html Template">
         <!-- ======== Page title ============ -->
-        <title>Agznko - Creative Agency and Portfolio Html Template</title>
+        <title>À propos - Gestion des stages</title>
         <!--<< Favcion >>-->
         <link rel="shortcut icon" href="assets/img/favicon.svg">
         <!--<< Bootstrap min.css >>-->
@@ -29,9 +29,58 @@
         <!--<< Color.css >>-->
         <link rel="stylesheet" href="assets/css/color.css">
         <!--<< Main.css >>-->
-        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="css/main.css">
     </head>
     <body class="body-bg">
+
+         <!-- Preloader Start -->
+         <div id="preloader" class="preloader">
+            <div class="animation-preloader">
+                <div class="spinner">                
+                </div>
+                <div class="txt-loading">
+                    <span data-text-preloader="A" class="letters-loading">
+                        A
+                    </span>
+                    <span data-text-preloader="G" class="letters-loading">
+                        G
+                    </span>
+                    <span data-text-preloader="Z" class="letters-loading">
+                        Z
+                    </span>
+                    <span data-text-preloader="N" class="letters-loading">
+                        N
+                    </span>
+                    <span data-text-preloader="K" class="letters-loading">
+                        K
+                    </span>
+                    <span data-text-preloader="0" class="letters-loading">
+                        O
+                    </span>
+                </div>
+                <p class="text-center">Loading</p>
+            </div>
+            <div class="loader">
+                <div class="row">
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--<< Mouse Cursor Start >>-->  
+        <div class="mouse-cursor cursor-outer"></div>
+        <div class="mouse-cursor cursor-inner"></div>
 
         <!-- Back To Top start -->
         <button id="back-top" class="back-to-top">
@@ -114,172 +163,21 @@
         <div class="offcanvas__overlay"></div>
 
         <!-- Header Section Start -->
-        <header id="header-sticky" class="header-1">
-            <div class="container">
-                <div class="mega-menu-wrapper">
-                    <div class="header-main">
-                        <div class="logo">
-                            <a href="index.html" class="header-logo">
-                                <img src="assets/img/logo/white-logo.svg" alt="logo-img">
-                            </a>
+        <header id="header-sticky" class="header-1" data-include></header>
+
+        <!-- Search Area Start -->
+        <div class="search-wrap">
+            <div class="search-inner">
+                <i class="fas fa-times search-close" id="search-close"></i>
+                <div class="search-cell">
+                    <form method="get">
+                        <div class="search-field-holder">
+                            <input type="search" class="main-search-input" placeholder="Search...">
                         </div>
-                        <div class="mean__menu-wrapper">
-                            <div class="main-menu">
-                                <nav id="mobile-menu">
-                                    <ul>
-                                        <li class="has-dropdown active menu-thumb">
-                                            <a href="index.html">
-                                                Home 
-                                                <i class="fa-solid fa-chevron-down"></i>
-                                            </a>
-                                            <ul class="submenu has-homemenu">
-                                                <li>
-                                                    <div class="homemenu-items">
-                                                        <div class="homemenu">
-                                                            <div class="homemenu-thumb">
-                                                                <img src="assets/img/header/home-1.jpg" alt="img">
-                                                                <div class="demo-button">
-                                                                    <a href="index.html" class="theme-btn">
-                                                                        Demo Page
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="homemenu-content text-center">
-                                                                <h4 class="homemenu-title">
-                                                                    Home 01
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                        <div class="homemenu">
-                                                            <div class="homemenu-thumb mb-15">
-                                                                <img src="assets/img/header/home-2.jpg" alt="img">
-                                                                <div class="demo-button">
-                                                                    <a href="index-2.html" class="theme-btn">
-                                                                        Demo Page
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="homemenu-content text-center">
-                                                                <h4 class="homemenu-title">
-                                                                    Home 02
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                        <div class="homemenu">
-                                                            <div class="homemenu-thumb mb-15">
-                                                                <img src="assets/img/header/home-3.jpg" alt="img">
-                                                                <div class="demo-button">
-                                                                    <a href="index-3.html" class="theme-btn">
-                                                                        Demo Page
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="homemenu-content text-center">
-                                                                <h4 class="homemenu-title">
-                                                                    Home 03
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                        <div class="homemenu">
-                                                            <div class="homemenu-thumb mb-15">
-                                                                <img src="assets/img/header/home-4.jpg" alt="img">
-                                                                <div class="demo-button">
-                                                                    <a href="index-4.html" class="theme-btn">
-                                                                        Demo Page
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="homemenu-content text-center">
-                                                                <h4 class="homemenu-title">
-                                                                    Home 04
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-dropdown active d-xl-none">
-                                            <a href="team.html" class="border-none">
-                                            Home
-                                            </a>
-                                            <ul class="submenu">
-                                                <li><a href="index.html">Home 01</a></li>
-                                                <li><a href="index-2.html">Home 02</a></li>
-                                                <li><a href="index-3.html">Home 03</a></li>
-                                                <li><a href="index-4.html">Home 04</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="about.html">About Us</a>
-                                        </li>
-                                        <li>
-                                            <a href="service-details.html">
-                                                Services
-                                                <i class="fa-solid fa-chevron-down"></i>
-                                            </a>
-                                            <ul class="submenu">
-                                                <li><a href="service.html">Service Page 01</a></li>
-                                                <li><a href="service-2.html">Service Page 02</a></li>
-                                                <li><a href="service-details.html">Service Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="project-details.html">
-                                                Projects
-                                                <i class="fa-solid fa-chevron-down"></i>
-                                            </a>
-                                            <ul class="submenu">
-                                                <li><a href="project.html">Project Page 01</a></li>
-                                                <li><a href="project-2.html">Project Page 02</a></li>
-                                                <li><a href="project-details.html">Project Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="news-details.html">
-                                                Blog
-                                                <i class="fa-solid fa-chevron-down"></i>
-                                            </a>
-                                            <ul class="submenu">
-                                                <li><a href="news-grid.html">Blog Grid</a></li>
-                                                <li><a href="news.html">Blog List</a></li>
-                                                <li><a href="news-details.html">Blog Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-dropdown">
-                                            <a href="news.html">
-                                                Pages
-                                                <i class="fa-solid fa-chevron-down"></i>
-                                            </a>
-                                            <ul class="submenu">
-                                                <li><a href="team.html">Team Page 01</a></li>
-                                                <li><a href="team-2.html">Team Page 02</a></li>
-                                                <li><a href="team-details.html">Team Details</a></li>
-                                                <li><a href="pricing.html">Our Pricing</a></li>
-                                                <li><a href="contact.html">Contact Us</a></li>
-                                                <li><a href="faq.html">Our Faq</a></li>
-                                                <li><a href="404.html">404 Page</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="header-right d-flex justify-content-end align-items-center">
-                            <div class="header-button">
-                                <a href="#0" class="search-trigger search-icon"><i class="fa-regular fa-magnifying-glass"></i></a>
-                               <a href="contact.html" class="theme-btn">Get In Touch</a>
-                            </div>
-                            <div class="header__hamburger d-xl-block my-auto">
-                                <div class="sidebar__toggle">
-                                    <i class="fas fa-bars"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
-        </header>
+        </div>
 
         <!-- Breadcrumb Section Start -->
         <div class="breadcrumb-wrapper section-bg bg-cover" style="background-image: url('assets/img/breadcrumb-shape.png');">
@@ -772,7 +670,7 @@
                                         </div>
                                     </div>
                                     <p>
-                                        Agenko transformed our ideas into a stunning reality. Their innovative approach and dedication to our project were exceptional. We couldn’t be happier with the results."
+                                        Agenko transformed our ideas into a stunning reality. Their innovative approach and dedication to our project were exceptional. We couldnâ€™t be happier with the results."
                                     </p>
                                     <div class="client-info">
                                         <div class="client-img">
@@ -800,7 +698,7 @@
                                         </div>
                                     </div>
                                     <p>
-                                        Agenko transformed our ideas into a stunning reality. Their innovative approach and dedication to our project were exceptional. We couldn’t be happier with the results."
+                                        Agenko transformed our ideas into a stunning reality. Their innovative approach and dedication to our project were exceptional. We couldnâ€™t be happier with the results."
                                     </p>
                                     <div class="client-info">
                                         <div class="client-img">
@@ -828,7 +726,7 @@
                                         </div>
                                     </div>
                                     <p>
-                                        Agenko transformed our ideas into a stunning reality. Their innovative approach and dedication to our project were exceptional. We couldn’t be happier with the results."
+                                        Agenko transformed our ideas into a stunning reality. Their innovative approach and dedication to our project were exceptional. We couldnâ€™t be happier with the results."
                                     </p>
                                     <div class="client-info">
                                         <div class="client-img">
@@ -856,7 +754,7 @@
                                         </div>
                                     </div>
                                     <p>
-                                        Agenko transformed our ideas into a stunning reality. Their innovative approach and dedication to our project were exceptional. We couldn’t be happier with the results."
+                                        Agenko transformed our ideas into a stunning reality. Their innovative approach and dedication to our project were exceptional. We couldnâ€™t be happier with the results."
                                     </p>
                                     <div class="client-info">
                                         <div class="client-img">
@@ -870,6 +768,9 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="swiper-dot pt-5">
+                            <div class="dot"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -879,7 +780,7 @@
         <div class="brand-section section-padding fix pt-0 section-bg">
             <div class="container">
                 <div class="brand-text">
-                    <h5>CLIENTS I’VE WORKED WITH</h5>
+                    <h5>CLIENTS Iâ€™VE WORKED WITH</h5>
                 </div>
                 <div class="swiper brand-slider">
                     <div class="swiper-wrapper">
@@ -922,105 +823,14 @@
         <section class="lets-talk-section fix section-padding pb-0">
             <div class="container">
                 <div class="lets-talk-wrapper">
-                    <h2 class="wow fadeInUp" data-wow-delay=".3s">Have a project in mind? Let’s <br> work together!</h2>
-                    <a href="contact.html" class="theme-btn wow fadeInUp" data-wow-delay=".5s">Let’s Talk!</a>
+                    <h2 class="wow fadeInUp" data-wow-delay=".3s">Have a project in mind? Letâ€™s <br> work together!</h2>
+                    <a href="contact.html" class="theme-btn wow fadeInUp" data-wow-delay=".5s">Letâ€™s Talk!</a>
                 </div>
             </div>
         </section>
 
         <!-- Footer Section Start -->
-        <footer class="footer-section fix">
-            <div class="container">
-                <div class="footer-widgets-wrapper">
-                    <div class="row">
-                        <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
-                            <div class="single-footer-widget">
-                                <div class="widget-head">
-                                    <a href="index.html">
-                                        <img src="assets/img/logo/white-logo.svg" alt="img">
-                                    </a>
-                                </div>
-                                <div class="footer-content">
-                                    <p>
-                                        Agenko All Rights Reserved. Designed <br> with passion,  Let's create something <br> amazing together.
-                                    </p>
-                                    <div class="social-icon d-flex align-items-center">
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fab fa-vimeo-v"></i></a>
-                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-4 col-md-6 ps-lg-3 wow fadeInUp" data-wow-delay=".4s">
-                            <div class="single-footer-widget">
-                                <div class="widget-head">
-                                    <h3>Quick Links</h3>
-                                </div>
-                                <ul class="list-items">
-                                    <li>
-                                        <a href="about.html"> 
-                                            About Us
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="service.html"> 
-                                            Our Services
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="news.html"> 
-                                            Our Blog
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="contact.html"> 
-                                            Contact Us
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp" data-wow-delay=".6s">
-                            <div class="single-footer-widget">
-                                <div class="widget-head">
-                                    <h3>Office</h3>
-                                </div>
-                                <div class="footer-content">
-                                    <p>4517 Washington. Manchester, Kentucky 39495</p>
-                                    <div class="contact-text">
-                                        <h4 class="pb-3"><a href="tel:6035550123">(603) 555-0123</a></h4>
-                                        <h5><a href="mailto:info@example.com">info@example.com</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 ps-lg-3 wow fadeInUp" data-wow-delay=".8s">
-                            <div class="single-footer-widget">
-                                <div class="widget-head">
-                                    <h3>Subscribe to our newsletter</h3>
-                                </div>
-                                <div class="footer-content">
-                                    <div class="footer-input">
-                                        <input type="email" id="email" placeholder="Enter your email">
-                                        <button class="newsletter-btn" type="submit">
-                                            <i class="fa-sharp fa-light fa-paper-plane"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <div class="footer-bottom-wrapper">
-                        <p class="wow fadeInUp" data-wow-delay=".3s">Copyright @ 2024 Agenko</p>
-                        <p class="wow fadeInUp" data-wow-delay=".5s">Designed By <a href="index.html">Gramentheme</a></p>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <footer class="footer-section section-bg fix" data-include></footer>
 
         <!--<< All JS Plugins >>-->
         <script src="assets/js/jquery-3.7.1.min.js"></script>
@@ -1042,7 +852,7 @@
         <script src="assets/js/jquery.magnific-popup.min.js"></script>
         <!--<< Wow Animation Js >>-->
         <script src="assets/js/wow.min.js"></script>
-        <!--<< Main.js >>-->
-        <script src="assets/js/main.js"></script>
+        <script src="js/includes.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>

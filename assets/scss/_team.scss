@@ -183,9 +183,17 @@
     .details-content {
         margin-left: 50px;
 
+        @include breakpoint (max-xl){
+            margin-left: 0;
+        }
+
         h2 {
             font-size: 56px;
             font-weight: 600;
+
+            @include breakpoint (max-sm){
+               font-size: 42px;
+            }
         }
 
         span {

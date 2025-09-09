@@ -153,6 +153,11 @@
             border-radius: 12px;
             gap: 24px;
 
+            @include breakpoint (max-xxl){
+                flex-wrap: wrap;
+                padding: 20px;
+            }
+
             &:not(:last-child){
                 margin-bottom: 24px;
             }
@@ -179,6 +184,10 @@
                 h3 {
                     font-size: 32px;
                     margin-bottom: 10px;
+
+                    @include breakpoint (max-sm){
+                        font-size: 28px;
+                    }
 
                     a {
                         &:hover {
