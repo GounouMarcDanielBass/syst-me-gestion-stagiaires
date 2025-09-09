@@ -1,89 +1,172 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Créer un compte</title>
-        <link rel="shortcut icon" href="../../assets/img/favicon.svg">
-        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../../assets/css/all.min.css">
-        <link rel="stylesheet" href="../../assets/css/animate.css">
-        <link rel="stylesheet" href="../../assets/css/magnific-popup.css">
-        <link rel="stylesheet" href="../../assets/css/meanmenu.css">
-        <link rel="stylesheet" href="../../assets/css/swiper-bundle.min.css">
-        <link rel="stylesheet" href="../../assets/css/nice-select.css">
-        <link rel="stylesheet" href="../../assets/css/color.css">
-        <link rel="stylesheet" href="../../css/main.css">
-    </head>
-    <body class="body-bg">
-        <header id="header-sticky" class="header-1" data-include></header>
-        <section class="section-padding">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <div class="single-footer-widget">
-                            <div class="widget-head"><h3>Créer un compte</h3></div>
-                            <div class="footer-content">
-                                <form class="row g-3">
-                                    <div class="col-md-6">
-                                        <label class="form-label">Nom</label>
-                                        <input type="text" class="form-control" placeholder="Votre nom">
+<header id="header-sticky" class="header-1" data-include></header>
+
+<!--<< Breadcrumb Section Start >>-->
+<section class="breadcrumb-wrapper section-padding bg-cover" style="background-image: url('../../assets/img/hero/02.jpg');">
+    <div class="container">
+        <div class="page-heading">
+            <h1 class="wow fadeInUp" data-wow-delay=".3s">Créer un compte</h1>
+            <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                <li><a href="../../index.html">Accueil</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li>Inscription</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!--<< Signup Section Start >>-->
+<section class="contact-section fix section-padding">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <div class="contact-form-items">
+                    <div class="contact-content text-center">
+                        <h2 class="wow fadeInUp" data-wow-delay=".3s">Créer un compte</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".5s">Rejoignez la plateforme selon votre statut</p>
+                    </div>
+                    <form action="#" id="signup-form" method="POST" class="wow fadeInUp" data-wow-delay=".7s">
+                        <div class="row g-4">
+                            <div class="col-lg-6">
+                                <div class="form-clt">
+                                    <input type="text" name="first_name" id="first_name" placeholder="Prénom" required>
+                                    <div class="icon">
+                                        <i class="fal fa-user"></i>
                                     </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Prénom</label>
-                                        <input type="text" class="form-control" placeholder="Votre prénom">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-clt">
+                                    <input type="text" name="last_name" id="last_name" placeholder="Nom" required>
+                                    <div class="icon">
+                                        <i class="fal fa-user"></i>
                                     </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Email</label>
-                                        <input type="email" class="form-control" placeholder="email@domaine.com">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-clt">
+                                    <input type="email" name="email" id="email" placeholder="Adresse email" required>
+                                    <div class="icon">
+                                        <i class="fal fa-envelope"></i>
                                     </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Téléphone</label>
-                                        <input type="text" class="form-control" placeholder="+229 ...">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-clt">
+                                    <input type="password" name="password" id="password" placeholder="Mot de passe" required>
+                                    <div class="icon">
+                                        <i class="fal fa-lock"></i>
                                     </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Mot de passe</label>
-                                        <input type="password" class="form-control" placeholder="••••••••">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-clt">
+                                    <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirmer le mot de passe" required>
+                                    <div class="icon">
+                                        <i class="fal fa-lock"></i>
                                     </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Confirmer</label>
-                                        <input type="password" class="form-control" placeholder="••••••••">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-clt">
+                                    <select name="role" id="role" class="nice-select" required>
+                                        <option value="">Sélectionnez votre rôle</option>
+                                        <option value="student">Étudiant</option>
+                                        <option value="company">Entreprise</option>
+                                        <option value="supervisor">Encadrant</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6" id="student-fields" style="display: none;">
+                                <div class="form-clt">
+                                    <input type="text" name="student_id" id="student_id" placeholder="Numéro étudiant">
+                                    <div class="icon">
+                                        <i class="fal fa-id-card"></i>
                                     </div>
-                                    <div class="col-12">
-                                        <label class="form-label">Rôle</label>
-                                        <select class="form-select">
-                                            <option>Étudiant</option>
-                                            <option>Entreprise</option>
-                                            <option>Encadrant</option>
-                                        </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6" id="company-fields" style="display: none;">
+                                <div class="form-clt">
+                                    <input type="text" name="company_name" id="company_name" placeholder="Nom de l'entreprise">
+                                    <div class="icon">
+                                        <i class="fal fa-building"></i>
                                     </div>
-                                    <div class="col-12">
-                                        <button class="theme-btn" type="submit">Créer</button>
-                                        <p class="mt-3">Déjà inscrit ? <a href="login.html">Se connecter</a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6" id="company-fields-2" style="display: none;">
+                                <div class="form-clt">
+                                    <input type="text" name="siret" id="siret" placeholder="SIRET">
+                                    <div class="icon">
+                                        <i class="fal fa-file-alt"></i>
                                     </div>
-                                </form>
+                                </div>
+                            </div>
+                            <div class="col-lg-6" id="supervisor-fields" style="display: none;">
+                                <div class="form-clt">
+                                    <input type="text" name="department" id="department" placeholder="Département">
+                                    <div class="icon">
+                                        <i class="fal fa-building"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-clt">
+                                    <input type="tel" name="phone" id="phone" placeholder="Téléphone">
+                                    <div class="icon">
+                                        <i class="fal fa-phone"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="terms" required>
+                                    <label class="form-check-label" for="terms">
+                                        J'accepte les <a href="#" class="text-decoration-underline">conditions d'utilisation</a> et la <a href="#" class="text-decoration-underline">politique de confidentialité</a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-clt">
+                                    <button type="submit" class="theme-btn">
+                                        <span>Créer mon compte <i class="fas fa-chevron-right"></i></span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
+                    </form>
+                    <div class="text-center mt-4">
+                        <p>Déjà un compte ? <a href="login.html" class="text-decoration-underline">Se connecter</a></p>
                     </div>
                 </div>
             </div>
-        </section>
-        <footer class="footer-section section-bg fix" data-include></footer>
-        <script src="../../assets/js/jquery-3.7.1.min.js"></script>
-        <script src="../../assets/js/viewport.jquery.js"></script>
-        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
-        <script src="../../assets/js/jquery.nice-select.min.js"></script>
-        <script src="../../assets/js/jquery.waypoints.js"></script>
-        <script src="../../assets/js/jquery.counterup.min.js"></script>
-        <script src="../../assets/js/swiper-bundle.min.js"></script>
-        <script src="../../assets/js/jquery.meanmenu.min.js"></script>
-        <script src="../../assets/js/jquery.magnific-popup.min.js"></script>
-        <script src="../../assets/js/wow.min.js"></script>
-        <script src="../../js/includes.js"></script>
-        <script src="../../js/main.js"></script>
-    </body>
-</html>
+        </div>
+    </div>
+</section>
 
+<footer class="footer-section section-bg fix" data-include></footer>
 
-
+<script>
+// Show/hide role-specific fields
+document.getElementById('role').addEventListener('change', function() {
+    const role = this.value;
+    const studentFields = document.getElementById('student-fields');
+    const companyFields = document.getElementById('company-fields');
+    const companyFields2 = document.getElementById('company-fields-2');
+    const supervisorFields = document.getElementById('supervisor-fields');
+    
+    // Hide all fields first
+    studentFields.style.display = 'none';
+    companyFields.style.display = 'none';
+    companyFields2.style.display = 'none';
+    supervisorFields.style.display = 'none';
+    
+    // Show relevant fields
+    if (role === 'student') {
+        studentFields.style.display = 'block';
+    } else if (role === 'company') {
+        companyFields.style.display = 'block';
+        companyFields2.style.display = 'block';
+    } else if (role === 'supervisor') {
+        supervisorFields.style.display = 'block';
+    }
+});
+</script>
