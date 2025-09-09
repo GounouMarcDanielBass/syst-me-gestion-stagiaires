@@ -1,77 +1,366 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Offres de stage</title>
-        <link rel="shortcut icon" href="../assets/img/favicon.svg">
-        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../assets/css/all.min.css">
-        <link rel="stylesheet" href="../assets/css/animate.css">
-        <link rel="stylesheet" href="../assets/css/magnific-popup.css">
-        <link rel="stylesheet" href="../assets/css/meanmenu.css">
-        <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
-        <link rel="stylesheet" href="../assets/css/nice-select.css">
-        <link rel="stylesheet" href="../assets/css/color.css">
-        <link rel="stylesheet" href="../css/main.css">
-    </head>
-    <body class="body-bg">
-        <header id="header-sticky" class="header-1" data-include></header>
-        <section class="section-padding">
-            <div class="container">
-                <div class="section-title-area d-flex justify-content-between align-items-center">
-                    <div class="section-title">
-                        <h6>Stages</h6>
-                        <h2 class="mb-0">Offres de <span>stage</span></h2>
+<header id="header-sticky" class="header-1" data-include></header>
+
+<!--<< Breadcrumb Section Start >>-->
+<section class="breadcrumb-wrapper section-padding bg-cover" style="background-image: url('../assets/img/hero/01.jpg');">
+    <div class="container">
+        <div class="page-heading">
+            <h1 class="wow fadeInUp" data-wow-delay=".3s">Offres de Stage</h1>
+            <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li>Offres de Stage</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!--<< Offers Section Start >>-->
+<section class="service-section fix section-padding">
+    <div class="container">
+        <!--<< Search and Filters >>-->
+        <div class="row mb-5">
+            <div class="col-lg-12">
+                <div class="contact-form-items">
+                    <div class="contact-content text-center mb-4">
+                        <h2 class="wow fadeInUp" data-wow-delay=".3s">Rechercher des offres</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".5s">Trouvez le stage qui correspond à votre profil</p>
                     </div>
-                    <a class="theme-btn" href="../pages/entreprise/dashboard.html">Publier une offre</a>
-                </div>
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="service-box-items">
-                            <div class="icon"><img src="../assets/img/icon/01.svg" alt="icon"></div>
-                            <div class="content">
-                                <h3><a href="#">Développeur Web</a></h3>
-                                <p>Stage 3-6 mois • Cotonou • React / Laravel</p>
-                                <div class="service-btn">
-                                    <a href="#" class="link-btn">Voir détails</a>
-                                    <a href="candidatures.html" class="arrow-icon"><img src="../assets/img/icon/02.svg" alt="postuler"></a>
+                    <form class="search-form wow fadeInUp" data-wow-delay=".7s">
+                        <div class="row g-3">
+                            <div class="col-lg-4">
+                                <div class="form-clt">
+                                    <input type="text" placeholder="Mots-clés (poste, compétences...)">
+                                    <div class="icon">
+                                        <i class="fas fa-search"></i>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="col-lg-3">
+                                <div class="form-clt">
+                                    <select class="nice-select">
+                                        <option value="">Tous les domaines</option>
+                                        <option value="informatique">Informatique</option>
+                                        <option value="marketing">Marketing</option>
+                                        <option value="finance">Finance</option>
+                                        <option value="design">Design</option>
+                                        <option value="commercial">Commercial</option>
+                                        <option value="rh">Ressources Humaines</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-clt">
+                                    <select class="nice-select">
+                                        <option value="">Toutes les villes</option>
+                                        <option value="paris">Paris</option>
+                                        <option value="lyon">Lyon</option>
+                                        <option value="marseille">Marseille</option>
+                                        <option value="toulouse">Toulouse</option>
+                                        <option value="nantes">Nantes</option>
+                                        <option value="remote">Télétravail</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <button type="submit" class="theme-btn w-100">
+                                    <span>Rechercher</span>
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="service-box-items">
-                            <div class="icon"><img src="../assets/img/icon/01.svg" alt="icon"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--<< Offers Grid >>-->
+        <div class="row g-4">
+            <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="single-service-items">
+                    <div class="service-image">
+                        <img src="../assets/img/service/details-1.jpg" alt="service-img">
+                        <div class="service-content">
+                            <div class="icon">
+                                <i class="fas fa-code"></i>
+                            </div>
                             <div class="content">
-                                <h3><a href="#">Data Analyst</a></h3>
-                                <p>Stage 4-6 mois • Parakou • Python / SQL</p>
-                                <div class="service-btn">
-                                    <a href="#" class="link-btn">Voir détails</a>
-                                    <a href="candidatures.html" class="arrow-icon"><img src="../assets/img/icon/02.svg" alt="postuler"></a>
+                                <h3><a href="#">Développeur Frontend React</a></h3>
+                                <p>TechCorp - Paris</p>
+                                <div class="service-meta">
+                                    <span class="duration"><i class="fas fa-calendar me-1"></i>3-6 mois</span>
+                                    <span class="level"><i class="fas fa-graduation-cap me-1"></i>Master</span>
+                                </div>
+                                <div class="service-tags mt-2">
+                                    <span class="badge bg-primary">React</span>
+                                    <span class="badge bg-secondary">JavaScript</span>
+                                    <span class="badge bg-info">CSS</span>
+                                </div>
+                                <div class="service-footer mt-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted"><i class="fas fa-clock me-1"></i>Publié il y a 2 jours</small>
+                                        <div class="service-actions">
+                                            <button class="btn btn-sm btn-outline-primary me-1" title="Voir détails">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-primary" title="Postuler">
+                                                <i class="fas fa-paper-plane"></i>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <footer class="footer-section section-bg fix" data-include></footer>
-        <script src="../assets/js/jquery-3.7.1.min.js"></script>
-        <script src="../assets/js/viewport.jquery.js"></script>
-        <script src="../assets/js/bootstrap.bundle.min.js"></script>
-        <script src="../assets/js/jquery.nice-select.min.js"></script>
-        <script src="../assets/js/jquery.waypoints.js"></script>
-        <script src="../assets/js/jquery.counterup.min.js"></script>
-        <script src="../assets/js/swiper-bundle.min.js"></script>
-        <script src="../assets/js/jquery.meanmenu.min.js"></script>
-        <script src="../assets/js/jquery.magnific-popup.min.js"></script>
-        <script src="../assets/js/wow.min.js"></script>
-        <script src="../js/includes.js"></script>
-        <script src="../js/main.js"></script>
-    </body>
-</html>
 
+            <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="single-service-items">
+                    <div class="service-image">
+                        <img src="../assets/img/service/details-2.jpg" alt="service-img">
+                        <div class="service-content">
+                            <div class="icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <div class="content">
+                                <h3><a href="#">Designer UX/UI</a></h3>
+                                <p>CreativeStudio - Lyon</p>
+                                <div class="service-meta">
+                                    <span class="duration"><i class="fas fa-calendar me-1"></i>4 mois</span>
+                                    <span class="level"><i class="fas fa-graduation-cap me-1"></i>Master</span>
+                                </div>
+                                <div class="service-tags mt-2">
+                                    <span class="badge bg-primary">Figma</span>
+                                    <span class="badge bg-secondary">Photoshop</span>
+                                    <span class="badge bg-info">UX Research</span>
+                                </div>
+                                <div class="service-footer mt-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted"><i class="fas fa-clock me-1"></i>Publié il y a 1 jour</small>
+                                        <div class="service-actions">
+                                            <button class="btn btn-sm btn-outline-primary me-1" title="Voir détails">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-primary" title="Postuler">
+                                                <i class="fas fa-paper-plane"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="single-service-items">
+                    <div class="service-image">
+                        <img src="../assets/img/service/details-3.jpg" alt="service-img">
+                        <div class="service-content">
+                            <div class="icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="content">
+                                <h3><a href="#">Analyste Marketing Digital</a></h3>
+                                <p>DigitalWave - Marseille</p>
+                                <div class="service-meta">
+                                    <span class="duration"><i class="fas fa-calendar me-1"></i>5 mois</span>
+                                    <span class="level"><i class="fas fa-graduation-cap me-1"></i>Master</span>
+                                </div>
+                                <div class="service-tags mt-2">
+                                    <span class="badge bg-primary">Google Analytics</span>
+                                    <span class="badge bg-secondary">SEO</span>
+                                    <span class="badge bg-info">Social Media</span>
+                                </div>
+                                <div class="service-footer mt-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted"><i class="fas fa-clock me-1"></i>Publié il y a 3 jours</small>
+                                        <div class="service-actions">
+                                            <button class="btn btn-sm btn-outline-primary me-1" title="Voir détails">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-primary" title="Postuler">
+                                                <i class="fas fa-paper-plane"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="single-service-items">
+                    <div class="service-image">
+                        <img src="../assets/img/service/details-4.jpg" alt="service-img">
+                        <div class="service-content">
+                            <div class="icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="content">
+                                <h3><a href="#">Data Scientist</a></h3>
+                                <p>InnovLab - Paris</p>
+                                <div class="service-meta">
+                                    <span class="duration"><i class="fas fa-calendar me-1"></i>6 mois</span>
+                                    <span class="level"><i class="fas fa-graduation-cap me-1"></i>Master</span>
+                                </div>
+                                <div class="service-tags mt-2">
+                                    <span class="badge bg-primary">Python</span>
+                                    <span class="badge bg-secondary">Machine Learning</span>
+                                    <span class="badge bg-info">SQL</span>
+                                </div>
+                                <div class="service-footer mt-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted"><i class="fas fa-clock me-1"></i>Publié il y a 1 semaine</small>
+                                        <div class="service-actions">
+                                            <button class="btn btn-sm btn-outline-primary me-1" title="Voir détails">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-primary" title="Postuler">
+                                                <i class="fas fa-paper-plane"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="single-service-items">
+                    <div class="service-image">
+                        <img src="../assets/img/service/details-5.jpg" alt="service-img">
+                        <div class="service-content">
+                            <div class="icon">
+                                <i class="fas fa-euro-sign"></i>
+                            </div>
+                            <div class="content">
+                                <h3><a href="#">Assistant Contrôleur de Gestion</a></h3>
+                                <p>FinanceFirst - Toulouse</p>
+                                <div class="service-meta">
+                                    <span class="duration"><i class="fas fa-calendar me-1"></i>4 mois</span>
+                                    <span class="level"><i class="fas fa-graduation-cap me-1"></i>Master</span>
+                                </div>
+                                <div class="service-tags mt-2">
+                                    <span class="badge bg-primary">Excel</span>
+                                    <span class="badge bg-secondary">SAP</span>
+                                    <span class="badge bg-info">Comptabilité</span>
+                                </div>
+                                <div class="service-footer mt-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted"><i class="fas fa-clock me-1"></i>Publié il y a 4 jours</small>
+                                        <div class="service-actions">
+                                            <button class="btn btn-sm btn-outline-primary me-1" title="Voir détails">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-primary" title="Postuler">
+                                                <i class="fas fa-paper-plane"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="single-service-items">
+                    <div class="service-image">
+                        <img src="../assets/img/hero/02.jpg" alt="service-img">
+                        <div class="service-content">
+                            <div class="icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="content">
+                                <h3><a href="#">Assistant RH</a></h3>
+                                <p>HumanCorp - Nantes</p>
+                                <div class="service-meta">
+                                    <span class="duration"><i class="fas fa-calendar me-1"></i>3 mois</span>
+                                    <span class="level"><i class="fas fa-graduation-cap me-1"></i>Licence</span>
+                                </div>
+                                <div class="service-tags mt-2">
+                                    <span class="badge bg-primary">Recrutement</span>
+                                    <span class="badge bg-secondary">SIRH</span>
+                                    <span class="badge bg-info">Communication</span>
+                                </div>
+                                <div class="service-footer mt-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted"><i class="fas fa-clock me-1"></i>Publié il y a 5 jours</small>
+                                        <div class="service-actions">
+                                            <button class="btn btn-sm btn-outline-primary me-1" title="Voir détails">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-primary" title="Postuler">
+                                                <i class="fas fa-paper-plane"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--<< Pagination >>-->
+        <div class="row mt-5">
+            <div class="col-lg-12">
+                <div class="page-nav-wrap text-center wow fadeInUp" data-wow-delay=".3s">
+                    <ul>
+                        <li><a class="page-numbers" href="#"><i class="fa-solid fa-arrow-left-long"></i></a></li>
+                        <li><a class="page-numbers active" href="#">01</a></li>
+                        <li><a class="page-numbers" href="#">02</a></li>
+                        <li><a class="page-numbers" href="#">03</a></li>
+                        <li><a class="page-numbers" href="#">04</a></li>
+                        <li><a class="page-numbers" href="#"><i class="fa-solid fa-arrow-right-long"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-section section-bg fix" data-include></footer>
+
+<style>
+.service-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.service-meta span {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.service-tags .badge {
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.service-footer {
+    border-top: 1px solid #e9ecef;
+    padding-top: 1rem;
+}
+
+.service-actions {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.search-form .form-clt {
+    position: relative;
+}
+
+.search-form .nice-select {
+    width: 100%;
+}
+</style>
