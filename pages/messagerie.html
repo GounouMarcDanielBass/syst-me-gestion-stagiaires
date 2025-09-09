@@ -1,72 +1,110 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Messagerie</title>
-        <link rel="shortcut icon" href="../assets/img/favicon.svg">
-        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../assets/css/all.min.css">
-        <link rel="stylesheet" href="../assets/css/animate.css">
-        <link rel="stylesheet" href="../assets/css/magnific-popup.css">
-        <link rel="stylesheet" href="../assets/css/meanmenu.css">
-        <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
-        <link rel="stylesheet" href="../assets/css/nice-select.css">
-        <link rel="stylesheet" href="../assets/css/color.css">
-        <link rel="stylesheet" href="../css/main.css">
-    </head>
-    <body class="body-bg">
-        <header id="header-sticky" class="header-1" data-include></header>
-        <section class="section-padding">
-            <div class="container">
-                <div class="section-title">
-                    <h6>Communication</h6>
-                    <h2>Messagerie <span>interne</span></h2>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-4">
-                        <div class="single-footer-widget">
-                            <div class="widget-head"><h3>Conversations</h3></div>
-                            <div class="footer-content">
-                                <ul class="list-items">
-                                    <li><a href="#">Encadrant: Dr. K.</a></li>
-                                    <li><a href="#">Entreprise: Tech Corp</a></li>
-                                    <li><a href="#">Admin stages</a></li>
-                                </ul>
-                            </div>
-                        </div>
+<header id="header-sticky" class="header-1" data-include></header>
+
+<!--<< Breadcrumb Section Start >>-->
+<section class="breadcrumb-wrapper section-padding bg-cover" style="background-image: url('../assets/img/hero/04.jpg');">
+    <div class="container">
+        <div class="page-heading">
+            <h1 class="wow fadeInUp" data-wow-delay=".3s">Messagerie</h1>
+            <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li>Messagerie</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!--<< Messaging Section Start >>-->
+<section class="contact-section fix section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="single-footer-widget">
+                    <div class="widget-head">
+                        <h3>Conversations</h3>
+                        <button class="theme-btn">Nouveau message</button>
                     </div>
-                    <div class="col-lg-8">
-                        <div class="single-footer-widget">
-                            <div class="widget-head"><h3>Messages</h3></div>
-                            <div class="footer-content">
-                                <div class="mb-3 p-3 section-bg">Bonjour, pouvez-vous partager votre convention signée ?</div>
-                                <form class="d-flex gap-2">
-                                    <input class="form-control" type="text" placeholder="Votre message...">
-                                    <button class="theme-btn" type="submit">Envoyer</button>
-                                </form>
+                    <div class="footer-content">
+                        <div class="conversation-list">
+                            <div class="conversation-item active">
+                                <img src="../assets/img/team/01.jpg" alt="User" class="conversation-avatar">
+                                <div class="conversation-info">
+                                    <h5>Prof. Martin Dubois</h5>
+                                    <p>Bonjour, pouvez-vous m'envoyer...</p>
+                                    <small>14:30</small>
+                                </div>
+                            </div>
+                            <div class="conversation-item">
+                                <img src="../assets/img/team/02.jpg" alt="User" class="conversation-avatar">
+                                <div class="conversation-info">
+                                    <h5>TechCorp RH</h5>
+                                    <p>Félicitations ! Votre candidature...</p>
+                                    <small>Hier</small>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <footer class="footer-section section-bg fix" data-include></footer>
-        <script src="../assets/js/jquery-3.7.1.min.js"></script>
-        <script src="../assets/js/viewport.jquery.js"></script>
-        <script src="../assets/js/bootstrap.bundle.min.js"></script>
-        <script src="../assets/js/jquery.nice-select.min.js"></script>
-        <script src="../assets/js/jquery.waypoints.js"></script>
-        <script src="../assets/js/jquery.counterup.min.js"></script>
-        <script src="../assets/js/swiper-bundle.min.js"></script>
-        <script src="../assets/js/jquery.meanmenu.min.js"></script>
-        <script src="../assets/js/jquery.magnific-popup.min.js"></script>
-        <script src="../assets/js/wow.min.js"></script>
-        <script src="../js/includes.js"></script>
-        <script src="../js/main.js"></script>
-    </body>
-</html>
+            <div class="col-lg-8">
+                <div class="single-footer-widget">
+                    <div class="widget-head">
+                        <h3>Prof. Martin Dubois</h3>
+                    </div>
+                    <div class="footer-content">
+                        <div class="chat-messages">
+                            <div class="message received">
+                                <p>Bonjour Marie, j'espère que votre stage se passe bien.</p>
+                                <small>14:25</small>
+                            </div>
+                            <div class="message sent">
+                                <p>Bonjour Professeur ! Oui, tout va très bien.</p>
+                                <small>14:27</small>
+                            </div>
+                        </div>
+                        <div class="chat-input">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Tapez votre message...">
+                                <button class="btn btn-primary">Envoyer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<footer class="footer-section section-bg fix" data-include></footer>
 
-
+<style>
+.conversation-item {
+    display: flex;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+.conversation-item.active {
+    background: #f0f8ff;
+}
+.conversation-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+.message {
+    margin: 1rem 0;
+    padding: 0.75rem;
+    border-radius: 8px;
+}
+.message.received {
+    background: #f8f9fa;
+    margin-right: 25%;
+}
+.message.sent {
+    background: #007bff;
+    color: white;
+    margin-left: 25%;
+}
+</style>
