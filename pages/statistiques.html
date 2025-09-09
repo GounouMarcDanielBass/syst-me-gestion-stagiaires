@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Statistiques et rapports de la plateforme de gestion de stages universitaires">
+    <title>Statistiques et Rapports - Plateforme Gestion de Stages</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../assets/css/meanmenu.css">
+    <link rel="stylesheet" href="../assets/css/nice-select.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div id="preloader">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- Header Include -->
+    <header id="header-sticky" class="header-1" data-include></header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-wrapper section-padding bg-cover" style="background-image: url('../assets/img/breadcrumb.jpg');">
+        <div class="container">
+            <div class="page-heading">
+                <h1 class="wow fadeInUp" data-wow-delay=".3s">Statistiques et Rapports</h1>
+                <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><i class="fal fa-minus"></i></li>
+                    <li>Statistiques</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Statistics Overview Section -->
+    <section class="statistics-overview section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center">
+                        <span class="wow fadeInUp">Tableau de Bord</span>
+                        <h2 class="wow fadeInUp" data-wow-delay=".3s">Vue d'ensemble des Statistiques</h2>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Key Metrics Cards -->
+            <div class="row mb-5">
+                <div class="col-xl-3 col-lg-6 col-md-6 mb-30">
+                    <div class="stats-card wow fadeInUp" data-wow-delay=".3s">
+                        <div class="stats-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stats-content">
+                            <h3>1,247</h3>
+                            <p>Étudiants Inscrits</p>
+                            <span class="stats-change positive">+12% ce mois</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-6 col-md-6 mb-30">
+                    <div class="stats-card wow fadeInUp" data-wow-delay=".4s">
+                        <div class="stats-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="stats-content">
+                            <h3>89</h3>
+                            <p>Entreprises Partenaires</p>
+                            <span class="stats-change positive">+5 nouvelles</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-6 col-md-6 mb-30">
+                    <div class="stats-card wow fadeInUp" data-wow-delay=".5s">
+                        <div class="stats-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="stats-content">
+                            <h3>342</h3>
+                            <p>Stages Actifs</p>
+                            <span class="stats-change positive">+8% progression</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-6 col-md-6 mb-30">
+                    <div class="stats-card wow fadeInUp" data-wow-delay=".6s">
+                        <div class="stats-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stats-content">
+                            <h3>94%</h3>
+                            <p>Taux de Réussite</p>
+                            <span class="stats-change positive">+2% amélioration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Charts and Analytics Section -->
+    <section class="analytics-section section-padding fix">
+        <div class="container">
+            <div class="row">
+                <!-- Chart 1: Monthly Applications -->
+                <div class="col-lg-6 mb-4">
+                    <div class="chart-container wow fadeInUp" data-wow-delay=".3s">
+                        <div class="chart-header">
+                            <h4>Candidatures par Mois</h4>
+                            <div class="chart-filters">
+                                <select class="form-select">
+                                    <option>2024</option>
+                                    <option>2023</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="chart-body">
+                            <canvas id="applicationsChart" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chart 2: Success Rates by Department -->
+                <div class="col-lg-6 mb-4">
+                    <div class="chart-container wow fadeInUp" data-wow-delay=".4s">
+                        <div class="chart-header">
+                            <h4>Taux de Réussite par Département</h4>
+                        </div>
+                        <div class="chart-body">
+                            <canvas id="successRateChart" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chart 3: Internship Duration Distribution -->
+                <div class="col-lg-6 mb-4">
+                    <div class="chart-container wow fadeInUp" data-wow-delay=".5s">
+                        <div class="chart-header">
+                            <h4>Répartition Durée des Stages</h4>
+                        </div>
+                        <div class="chart-body">
+                            <canvas id="durationChart" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chart 4: Company Sectors -->
+                <div class="col-lg-6 mb-4">
+                    <div class="chart-container wow fadeInUp" data-wow-delay=".6s">
+                        <div class="chart-header">
+                            <h4>Secteurs d'Entreprises</h4>
+                        </div>
+                        <div class="chart-body">
+                            <canvas id="sectorsChart" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reports Section -->
+    <section class="reports-section section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center">
+                        <span class="wow fadeInUp">Rapports</span>
+                        <h2 class="wow fadeInUp" data-wow-delay=".3s">Générer des Rapports Détaillés</h2>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Report Generation Cards -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="report-card wow fadeInUp" data-wow-delay=".3s">
+                        <div class="report-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="report-content">
+                            <h4>Rapport Mensuel</h4>
+                            <p>Statistiques complètes des activités du mois</p>
+                            <div class="report-filters">
+                                <select class="form-select mb-2">
+                                    <option>Janvier 2024</option>
+                                    <option>Février 2024</option>
+                                    <option>Mars 2024</option>
+                                </select>
+                                <button class="btn btn-primary">Générer PDF</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="report-card wow fadeInUp" data-wow-delay=".4s">
+                        <div class="report-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="report-content">
+                            <h4>Rapport par Département</h4>
+                            <p>Analyse détaillée par département académique</p>
+                            <div class="report-filters">
+                                <select class="form-select mb-2">
+                                    <option>Informatique</option>
+                                    <option>Génie Civil</option>
+                                    <option>Marketing</option>
+                                </select>
+                                <button class="btn btn-primary">Générer Excel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="report-card wow fadeInUp" data-wow-delay=".5s">
+                        <div class="report-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="report-content">
+                            <h4>Rapport Entreprises</h4>
+                            <p>Performance et engagement des entreprises partenaires</p>
+                            <div class="report-filters">
+                                <select class="form-select mb-2">
+                                    <option>Toutes les entreprises</option>
+                                    <option>Top performers</option>
+                                    <option>Nouvelles entreprises</option>
+                                </select>
+                                <button class="btn btn-primary">Générer Rapport</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Metrics Section -->
+    <section class="performance-metrics section-padding fix">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center">
+                        <span class="wow fadeInUp">Performance</span>
+                        <h2 class="wow fadeInUp" data-wow-delay=".3s">Indicateurs de Performance Clés</h2>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- KPI Cards -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="kpi-card wow fadeInUp" data-wow-delay=".3s">
+                        <div class="kpi-header">
+                            <h5>Temps Moyen de Placement</h5>
+                        </div>
+                        <div class="kpi-body">
+                            <div class="kpi-value">14 jours</div>
+                            <div class="kpi-trend positive">
+                                <i class="fas fa-arrow-down"></i> -3 jours
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="kpi-card wow fadeInUp" data-wow-delay=".4s">
+                        <div class="kpi-header">
+                            <h5>Satisfaction Étudiants</h5>
+                        </div>
+                        <div class="kpi-body">
+                            <div class="kpi-value">4.7/5</div>
+                            <div class="kpi-trend positive">
+                                <i class="fas fa-arrow-up"></i> +0.2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="kpi-card wow fadeInUp" data-wow-delay=".5s">
+                        <div class="kpi-header">
+                            <h5>Taux de Rétention</h5>
+                        </div>
+                        <div class="kpi-body">
+                            <div class="kpi-value">89%</div>
+                            <div class="kpi-trend positive">
+                                <i class="fas fa-arrow-up"></i> +5%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="kpi-card wow fadeInUp" data-wow-delay=".6s">
+                        <div class="kpi-header">
+                            <h5>Note Moyenne Stages</h5>
+                        </div>
+                        <div class="kpi-body">
+                            <div class="kpi-value">16.2/20</div>
+                            <div class="kpi-trend positive">
+                                <i class="fas fa-arrow-up"></i> +0.8
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Include -->
+    <footer class="footer-section fix" data-include></footer>
+
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Custom Charts Script -->
+    <script>
+        // Applications Chart
+        const applicationsCtx = document.getElementById('applicationsChart').getContext('2d');
+        new Chart(applicationsCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aoû', 'Sep', 'Oct', 'Nov', 'Déc'],
+                datasets: [{
+                    label: 'Candidatures',
+                    data: [120, 150, 180, 220, 190, 240, 280, 260, 300, 320, 280, 250],
+                    borderColor: '#0EA5E9',
+                    backgroundColor: 'rgba(14, 165, 233, 0.1)',
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        // Success Rate Chart
+        const successCtx = document.getElementById('successRateChart').getContext('2d');
+        new Chart(successCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Informatique', 'Génie Civil', 'Marketing', 'Finance', 'RH'],
+                datasets: [{
+                    label: 'Taux de Réussite (%)',
+                    data: [95, 88, 92, 86, 90],
+                    backgroundColor: ['#10B981', '#F59E0B', '#EF4444', '#8B5CF6', '#06B6D4']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        // Duration Chart
+        const durationCtx = document.getElementById('durationChart').getContext('2d');
+        new Chart(durationCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['2 mois', '3 mois', '4 mois', '6 mois'],
+                datasets: [{
+                    data: [25, 45, 20, 10],
+                    backgroundColor: ['#EF4444', '#F59E0B', '#10B981', '#3B82F6']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        // Sectors Chart
+        const sectorsCtx = document.getElementById('sectorsChart').getContext('2d');
+        new Chart(sectorsCtx, {
+            type: 'polarArea',
+            data: {
+                labels: ['Tech', 'Finance', 'Santé', 'Éducation', 'Manufacturing'],
+                datasets: [{
+                    data: [30, 25, 15, 20, 10],
+                    backgroundColor: ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+    </script>
+
+    <!-- Include Footer Scripts -->
+    <script src="../js/includes.js"></script>
+</body>
+</html>

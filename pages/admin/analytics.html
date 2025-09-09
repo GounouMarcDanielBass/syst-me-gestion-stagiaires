@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tableau de bord analytique avancé pour les administrateurs">
+    <title>Analytics Avancée - Administration</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../../assets/css/meanmenu.css">
+    <link rel="stylesheet" href="../../assets/css/nice-select.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+    <div id="preloader">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- Header Include -->
+    <header id="header-sticky" class="header-1" data-include></header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-wrapper section-padding bg-cover" style="background-image: url('../../assets/img/breadcrumb.jpg');">
+        <div class="container">
+            <div class="page-heading">
+                <h1 class="wow fadeInUp" data-wow-delay=".3s">Analytics Avancée</h1>
+                <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                    <li><a href="../../index.html">Accueil</a></li>
+                    <li><i class="fal fa-minus"></i></li>
+                    <li><a href="dashboard.html">Administration</a></li>
+                    <li><i class="fal fa-minus"></i></li>
+                    <li>Analytics</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Real-time Dashboard -->
+    <section class="analytics-dashboard section-padding">
+        <div class="container">
+            <!-- Time Range Selector -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="dashboard-controls">
+                        <div class="time-range-selector">
+                            <button class="btn btn-outline-primary active" data-range="today">Aujourd'hui</button>
+                            <button class="btn btn-outline-primary" data-range="week">7 jours</button>
+                            <button class="btn btn-outline-primary" data-range="month">30 jours</button>
+                            <button class="btn btn-outline-primary" data-range="quarter">3 mois</button>
+                            <button class="btn btn-outline-primary" data-range="year">1 an</button>
+                        </div>
+                        <div class="refresh-controls">
+                            <button class="btn btn-success" id="refreshData">
+                                <i class="fas fa-sync-alt"></i> Actualiser
+                            </button>
+                            <button class="btn btn-primary" id="exportData">
+                                <i class="fas fa-download"></i> Exporter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Real-time Metrics -->
+            <div class="row mb-5">
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="metric-card real-time">
+                        <div class="metric-header">
+                            <span class="metric-label">Connexions Actives</span>
+                            <div class="live-indicator"></div>
+                        </div>
+                        <div class="metric-value" id="activeConnections">127</div>
+                        <div class="metric-change positive">
+                            <i class="fas fa-arrow-up"></i> +15 depuis 1h
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <span class="metric-label">Candidatures Aujourd'hui</span>
+                        </div>
+                        <div class="metric-value" id="todayApplications">23</div>
+                        <div class="metric-change positive">
+                            <i class="fas fa-arrow-up"></i> +8 vs hier
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <span class="metric-label">Taux de Conversion</span>
+                        </div>
+                        <div class="metric-value" id="conversionRate">68.5%</div>
+                        <div class="metric-change positive">
+                            <i class="fas fa-arrow-up"></i> +2.3%
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <span class="metric-label">Revenus Générés</span>
+                        </div>
+                        <div class="metric-value" id="revenue">€47,250</div>
+                        <div class="metric-change positive">
+                            <i class="fas fa-arrow-up"></i> +12%
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Charts -->
+            <div class="row">
+                <!-- Funnel Analysis -->
+                <div class="col-lg-8 mb-4">
+                    <div class="chart-container advanced">
+                        <div class="chart-header">
+                            <h4>Analyse de l'Entonnoir de Conversion</h4>
+                            <div class="chart-controls">
+                                <select class="form-select">
+                                    <option>Par département</option>
+                                    <option>Par entreprise</option>
+                                    <option>Par période</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="chart-body">
+                            <canvas id="funnelChart" height="400"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Heat Map -->
+                <div class="col-lg-4 mb-4">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h4>Activité par Heure</h4>
+                        </div>
+                        <div class="chart-body">
+                            <div class="heatmap-container">
+                                <div class="heatmap-grid" id="activityHeatmap">
+                                    <!-- Generated by JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cohort Analysis -->
+                <div class="col-lg-6 mb-4">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h4>Analyse de Cohorte</h4>
+                        </div>
+                        <div class="chart-body">
+                            <canvas id="cohortChart" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Geographic Distribution -->
+                <div class="col-lg-6 mb-4">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h4>Distribution Géographique</h4>
+                        </div>
+                        <div class="chart-body">
+                            <canvas id="geoChart" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Predictive Analytics -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="predictive-section">
+                        <h3>Analyses Prédictives</h3>
+                        
+                        <div class="row">
+                            <div class="col-lg-4 mb-4">
+                                <div class="prediction-card">
+                                    <div class="prediction-header">
+                                        <h5>Prédiction Placements</h5>
+                                        <span class="confidence-score">Confiance: 87%</span>
+                                    </div>
+                                    <div class="prediction-body">
+                                        <div class="predicted-value">+18%</div>
+                                        <p>Augmentation prévue des placements le mois prochain</p>
+                                        <div class="trend-indicator positive">
+                                            <i class="fas fa-trending-up"></i>
+                                            Tendance positive confirmée
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-4 mb-4">
+                                <div class="prediction-card">
+                                    <div class="prediction-header">
+                                        <h5>Risque d'Abandon</h5>
+                                        <span class="confidence-score">Confiance: 92%</span>
+                                    </div>
+                                    <div class="prediction-body">
+                                        <div class="predicted-value warning">12 étudiants</div>
+                                        <p>À risque d'abandon dans les 2 prochaines semaines</p>
+                                        <button class="btn btn-warning btn-sm">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                            Actions préventives
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-4 mb-4">
+                                <div class="prediction-card">
+                                    <div class="prediction-header">
+                                        <h5>Demande Future</h5>
+                                        <span class="confidence-score">Confiance: 79%</span>
+                                    </div>
+                                    <div class="prediction-body">
+                                        <div class="predicted-value">+340 postes</div>
+                                        <p>Nouveaux postes de stage attendus ce trimestre</p>
+                                        <div class="sectors-breakdown">
+                                            <small>Tech: 45% | Finance: 25% | Autres: 30%</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alerts and Recommendations -->
+            <div class="row mt-5">
+                <div class="col-lg-6">
+                    <div class="alerts-panel">
+                        <h4>Alertes Système</h4>
+                        <div class="alert-item critical">
+                            <div class="alert-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <div class="alert-content">
+                                <h6>Pic d'activité détecté</h6>
+                                <p>Charge serveur à 85% - Surveillance recommandée</p>
+                                <small>Il y a 5 minutes</small>
+                            </div>
+                        </div>
+                        
+                        <div class="alert-item warning">
+                            <div class="alert-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="alert-content">
+                                <h6>Retard dans les évaluations</h6>
+                                <p>15 évaluations en retard de plus de 7 jours</p>
+                                <small>Il y a 1 heure</small>
+                            </div>
+                        </div>
+                        
+                        <div class="alert-item info">
+                            <div class="alert-icon">
+                                <i class="fas fa-info-circle"></i>
+                            </div>
+                            <div class="alert-content">
+                                <h6>Nouvelle entreprise partenaire</h6>
+                                <p>TechCorp a rejoint la plateforme</p>
+                                <small>Il y a 2 heures</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="recommendations-panel">
+                        <h4>Recommandations IA</h4>
+                        <div class="recommendation-item">
+                            <div class="rec-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="rec-content">
+                                <h6>Optimisation des processus</h6>
+                                <p>Automatiser les rappels d'évaluation pourrait réduire les retards de 40%</p>
+                                <button class="btn btn-sm btn-primary">Implémenter</button>
+                            </div>
+                        </div>
+                        
+                        <div class="recommendation-item">
+                            <div class="rec-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="rec-content">
+                                <h6>Engagement étudiant</h6>
+                                <p>Organiser des sessions de networking pourrait améliorer la satisfaction</p>
+                                <button class="btn btn-sm btn-primary">Planifier</button>
+                            </div>
+                        </div>
+                        
+                        <div class="recommendation-item">
+                            <div class="rec-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="rec-content">
+                                <h6>Expansion stratégique</h6>
+                                <p>Le secteur fintech montre un potentiel de croissance de 25%</p>
+                                <button class="btn btn-sm btn-primary">Analyser</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Include -->
+    <footer class="footer-section fix" data-include></footer>
+
+    <!-- Advanced Analytics Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    
+    <script>
+        // Real-time updates simulation
+        function updateRealTimeMetrics() {
+            const connections = document.getElementById('activeConnections');
+            const currentVal = parseInt(connections.textContent);
+            const change = Math.floor(Math.random() * 10) - 5;
+            connections.textContent = Math.max(0, currentVal + change);
+        }
+
+        // Funnel Chart
+        const funnelCtx = document.getElementById('funnelChart').getContext('2d');
+        new Chart(funnelCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Visiteurs', 'Inscrits', 'Candidatures', 'Entretiens', 'Acceptés', 'Placements'],
+                datasets: [{
+                    label: 'Entonnoir de Conversion',
+                    data: [1000, 650, 420, 280, 180, 120],
+                    backgroundColor: [
+                        '#3B82F6',
+                        '#1D4ED8',
+                        '#1E40AF',
+                        '#1E3A8A',
+                        '#172554',
+                        '#0F172A'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y'
+            }
+        });
+
+        // Cohort Chart
+        const cohortCtx = document.getElementById('cohortChart').getContext('2d');
+        new Chart(cohortCtx, {
+            type: 'line',
+            data: {
+                labels: ['Semaine 1', 'Semaine 2', 'Semaine 3', 'Semaine 4', 'Semaine 5', 'Semaine 6'],
+                datasets: [
+                    {
+                        label: 'Cohorte Jan 2024',
+                        data: [100, 85, 75, 68, 62, 58],
+                        borderColor: '#10B981',
+                        backgroundColor: 'rgba(16, 185, 129, 0.1)'
+                    },
+                    {
+                        label: 'Cohorte Fév 2024',
+                        data: [100, 88, 78, 72, 68, 65],
+                        borderColor: '#3B82F6',
+                        backgroundColor: 'rgba(59, 130, 246, 0.1)'
+                    },
+                    {
+                        label: 'Cohorte Mar 2024',
+                        data: [100, 92, 85, 80, 76, 72],
+                        borderColor: '#F59E0B',
+                        backgroundColor: 'rgba(245, 158, 11, 0.1)'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        // Geographic Chart
+        const geoCtx = document.getElementById('geoChart').getContext('2d');
+        new Chart(geoCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Paris', 'Lyon', 'Marseille', 'Toulouse', 'Autres'],
+                datasets: [{
+                    data: [35, 20, 15, 12, 18],
+                    backgroundColor: ['#EF4444', '#F59E0B', '#10B981', '#3B82F6', '#8B5CF6']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        // Activity Heatmap
+        function generateHeatmap() {
+            const heatmapContainer = document.getElementById('activityHeatmap');
+            const days = ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim'];
+            const hours = ['6h', '9h', '12h', '15h', '18h', '21h'];
+            
+            let heatmapHTML = '<div class="heatmap-labels-y">';
+            days.forEach(day => {
+                heatmapHTML += `<div class="heatmap-label">${day}</div>`;
+            });
+            heatmapHTML += '</div><div class="heatmap-grid-container">';
+            
+            // Add hour labels
+            heatmapHTML += '<div class="heatmap-labels-x">';
+            hours.forEach(hour => {
+                heatmapHTML += `<div class="heatmap-label">${hour}</div>`;
+            });
+            heatmapHTML += '</div>';
+            
+            // Add grid cells
+            heatmapHTML += '<div class="heatmap-cells">';
+            for (let i = 0; i < 42; i++) {
+                const intensity = Math.random();
+                const className = intensity > 0.7 ? 'high' : intensity > 0.4 ? 'medium' : 'low';
+                heatmapHTML += `<div class="heatmap-cell ${className}" title="${Math.round(intensity * 100)}% d'activité"></div>`;
+            }
+            heatmapHTML += '</div></div>';
+            
+            heatmapContainer.innerHTML = heatmapHTML;
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            generateHeatmap();
+            setInterval(updateRealTimeMetrics, 5000); // Update every 5 seconds
+        });
+
+        // Time range selector
+        document.querySelectorAll('[data-range]').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelector('.time-range-selector .active').classList.remove('active');
+                this.classList.add('active');
+                // Here you would typically update all charts with new data
+            });
+        });
+    </script>
+
+    <!-- Include Footer Scripts -->
+    <script src="../../js/includes.js"></script>
+</body>
+</html>
