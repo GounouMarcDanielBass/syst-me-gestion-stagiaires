@@ -1,84 +1,324 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Dashboard Admin</title>
-        <link rel="shortcut icon" href="../../assets/img/favicon.svg">
-        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../../assets/css/all.min.css">
-        <link rel="stylesheet" href="../../assets/css/animate.css">
-        <link rel="stylesheet" href="../../assets/css/magnific-popup.css">
-        <link rel="stylesheet" href="../../assets/css/meanmenu.css">
-        <link rel="stylesheet" href="../../assets/css/swiper-bundle.min.css">
-        <link rel="stylesheet" href="../../assets/css/nice-select.css">
-        <link rel="stylesheet" href="../../assets/css/color.css">
-        <link rel="stylesheet" href="../../css/main.css">
-    </head>
-    <body class="body-bg">
-        <header id="header-sticky" class="header-1" data-include></header>
-        <section class="section-padding">
-            <div class="container">
-                <div class="section-title">
-                    <h6>Administration</h6>
-                    <h2>Tableau de bord <span>Admin</span></h2>
-                </div>
-                <div class="row g-4">
-                    <div class="col-md-3">
-                        <div class="counter-items"><h2><span class="count">3</span></h2><p>Sessions de stage</p></div>
+<header id="header-sticky" class="header-1" data-include></header>
+
+<!--<< Breadcrumb Section Start >>-->
+<section class="breadcrumb-wrapper section-padding bg-cover" style="background-image: url('../../assets/img/hero/01.jpg');">
+    <div class="container">
+        <div class="page-heading">
+            <h1 class="wow fadeInUp" data-wow-delay=".3s">Dashboard Administrateur</h1>
+            <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                <li><a href="../../index.html">Accueil</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li>Dashboard Admin</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!--<< Admin Dashboard Section Start >>-->
+<section class="about-section section-padding">
+    <div class="container">
+        <!--<< Global Statistics >>-->
+        <div class="row g-4 mb-5">
+            <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="counter-items">
+                    <div class="icon">
+                        <i class="fas fa-users"></i>
                     </div>
-                    <div class="col-md-3">
-                        <div class="counter-items"><h2><span class="count">120</span></h2><p>Entreprises</p></div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="counter-items"><h2><span class="count">600</span></h2><p>Candidatures</p></div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="counter-items"><h2><span class="count">210</span></h2><p>Stages actifs</p></div>
+                    <div class="content">
+                        <h2><span class="count">1250</span></h2>
+                        <p>Étudiants inscrits</p>
                     </div>
                 </div>
-                <div class="row g-4 mt-1">
-                    <div class="col-lg-6">
-                        <div class="single-footer-widget">
-                            <div class="widget-head"><h3>Actions rapides</h3></div>
-                            <div class="footer-content">
-                                <a class="theme-btn" href="#">Créer une session</a>
-                                <a class="theme-btn" href="#">Valider entreprise</a>
-                                <a class="theme-btn" href="#">Attribuer encadrant</a>
-                            </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="counter-items">
+                    <div class="icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="content">
+                        <h2><span class="count">87</span></h2>
+                        <p>Entreprises partenaires</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="counter-items">
+                    <div class="icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="content">
+                        <h2><span class="count">342</span></h2>
+                        <p>Stages en cours</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="counter-items">
+                    <div class="icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="content">
+                        <h2><span class="count">95</span>%</h2>
+                        <p>Taux de placement</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!--<< Admin Actions >>-->
+            <div class="col-lg-4">
+                <div class="single-feature-items style-2">
+                    <div class="feature-content">
+                        <h3>Actions administratives</h3>
+                        <div class="feature-list">
+                            <ul>
+                                <li><a href="#" class="theme-btn w-100 mb-2"><i class="fas fa-plus me-2"></i>Créer session de stage</a></li>
+                                <li><a href="#" class="theme-btn w-100 mb-2"><i class="fas fa-check me-2"></i>Valider entreprises</a></li>
+                                <li><a href="#" class="theme-btn w-100 mb-2"><i class="fas fa-user-tie me-2"></i>Attribuer encadrants</a></li>
+                                <li><a href="#" class="theme-btn w-100 mb-2"><i class="fas fa-file-export me-2"></i>Générer rapports</a></li>
+                                <li><a href="#" class="theme-btn w-100 mb-2"><i class="fas fa-cog me-2"></i>Paramètres système</a></li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="single-footer-widget">
-                            <div class="widget-head"><h3>Rapports</h3></div>
-                            <div class="footer-content">
-                                <ul class="list-items">
-                                    <li><a href="#" class="link-btn">Candidatures par session</a></li>
-                                    <li><a href="#" class="link-btn">Stages par entreprise</a></li>
-                                    <li><a href="#" class="link-btn">Évaluations finales</a></li>
-                                </ul>
+                </div>
+            </div>
+
+            <!--<< Pending Validations >>-->
+            <div class="col-lg-8">
+                <div class="single-feature-items style-2">
+                    <div class="feature-content">
+                        <h3>Validations en attente</h3>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Type</th>
+                                        <th>Nom</th>
+                                        <th>Date</th>
+                                        <th>Priorité</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="badge bg-info">Entreprise</span></td>
+                                        <td>TechStart Solutions</td>
+                                        <td>25/01/2025</td>
+                                        <td><span class="badge bg-warning">Haute</span></td>
+                                        <td>
+                                            <button class="btn btn-sm btn-success me-1"><i class="fas fa-check"></i></button>
+                                            <button class="btn btn-sm btn-danger"><i class="fas fa-times"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="badge bg-success">Encadrant</span></td>
+                                        <td>Dr. Sophie Martin</td>
+                                        <td>24/01/2025</td>
+                                        <td><span class="badge bg-info">Normale</span></td>
+                                        <td>
+                                            <button class="btn btn-sm btn-success me-1"><i class="fas fa-check"></i></button>
+                                            <button class="btn btn-sm btn-danger"><i class="fas fa-times"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="badge bg-primary">Document</span></td>
+                                        <td>Convention_InnovCorp.pdf</td>
+                                        <td>23/01/2025</td>
+                                        <td><span class="badge bg-success">Basse</span></td>
+                                        <td>
+                                            <button class="btn btn-sm btn-primary me-1"><i class="fas fa-eye"></i></button>
+                                            <button class="btn btn-sm btn-success"><i class="fas fa-check"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--<< System Statistics Chart >>-->
+            <div class="col-lg-8">
+                <div class="single-feature-items style-2">
+                    <div class="feature-content">
+                        <h3>Statistiques du système</h3>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="stat-card">
+                                    <div class="stat-header">
+                                        <h5>Candidatures par mois</h5>
+                                    </div>
+                                    <div class="stat-chart">
+                                        <canvas id="applicationsChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="stat-card">
+                                    <div class="stat-header">
+                                        <h5>Répartition par domaine</h5>
+                                    </div>
+                                    <div class="stat-list">
+                                        <div class="stat-item">
+                                            <span>Informatique</span>
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 45%"></div>
+                                            </div>
+                                            <span>45%</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <span>Marketing</span>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-success" style="width: 25%"></div>
+                                            </div>
+                                            <span>25%</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <span>Finance</span>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-warning" style="width: 20%"></div>
+                                            </div>
+                                            <span>20%</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <span>Autres</span>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-danger" style="width: 10%"></div>
+                                            </div>
+                                            <span>10%</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <footer class="footer-section section-bg fix" data-include></footer>
-        <script src="../../assets/js/jquery-3.7.1.min.js"></script>
-        <script src="../../assets/js/viewport.jquery.js"></script>
-        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
-        <script src="../../assets/js/jquery.nice-select.min.js"></script>
-        <script src="../../assets/js/jquery.waypoints.js"></script>
-        <script src="../../assets/js/jquery.counterup.min.js"></script>
-        <script src="../../assets/js/swiper-bundle.min.js"></script>
-        <script src="../../assets/js/jquery.meanmenu.min.js"></script>
-        <script src="../../assets/js/jquery.magnific-popup.min.js"></script>
-        <script src="../../assets/js/wow.min.js"></script>
-        <script src="../../js/includes.js"></script>
-        <script src="../../js/main.js"></script>
-    </body>
-</html>
 
+            <!--<< Recent Activities >>-->
+            <div class="col-lg-4">
+                <div class="single-feature-items style-2">
+                    <div class="feature-content">
+                        <h3>Activités récentes</h3>
+                        <div class="activity-feed">
+                            <div class="activity-item">
+                                <div class="activity-icon bg-success">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <strong>Nouvel étudiant inscrit</strong><br>
+                                    <small>Marie Dubois - il y a 2h</small>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon bg-info">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <strong>Entreprise validée</strong><br>
+                                    <small>TechCorp - il y a 4h</small>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon bg-warning">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <strong>Rapport généré</strong><br>
+                                    <small>Statistiques janvier - il y a 6h</small>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon bg-primary">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <strong>Stage validé</strong><br>
+                                    <small>Pierre Martin chez InnovLab - il y a 1j</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<footer class="footer-section section-bg fix" data-include></footer>
 
+<style>
+.stat-card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.stat-item span:first-child {
+    min-width: 80px;
+    font-weight: 500;
+}
+
+.stat-item .progress {
+    flex: 1;
+    height: 8px;
+}
+
+.stat-item span:last-child {
+    min-width: 35px;
+    text-align: right;
+    font-weight: 600;
+}
+
+.activity-feed {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.activity-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    color: white;
+    font-size: 14px;
+}
+
+.activity-content {
+    flex: 1;
+}
+
+.table th {
+    border-top: none;
+    font-weight: 600;
+}
+
+.badge {
+    padding: 0.375rem 0.75rem;
+}
+</style>
