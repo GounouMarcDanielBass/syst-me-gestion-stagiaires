@@ -750,3 +750,572 @@ input[type="file"] {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+/* Styles pour la page à propos */
+.breadcrumb-wrapper.about-breadcrumb {
+    background-image: url('../assets/img/hero/02.jpg');
+}
+
+/* Styles pour la page contact */
+.breadcrumb-wrapper.contact-breadcrumb {
+    background-image: url('../assets/img/hero/03.jpg');
+}
+
+/* Styles pour la page FAQ */
+.breadcrumb-wrapper.faq-breadcrumb {
+    background-image: url('../assets/img/hero/04.jpg');
+}
+
+.faq-section {
+    background-color: #0a0a0a;
+}
+
+body.light-theme .faq-section {
+    background-color: #ffffff;
+}
+
+/* Styles pour les catégories FAQ */
+.faq-categories .btn {
+    border-radius: 25px;
+    padding: 8px 20px;
+    margin: 5px;
+    transition: all 0.3s ease;
+    border: 2px solid;
+}
+
+.faq-categories .btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-color: transparent;
+    color: white;
+    transform: scale(1.05);
+}
+
+body.light-theme .faq-categories .btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Styles pour les éléments FAQ */
+.accordion-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+body.light-theme .accordion-item {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e9ecef;
+}
+
+.accordion-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.accordion-button {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 20px 25px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+body.light-theme .accordion-button {
+    color: #333333;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background: rgba(102, 126, 234, 0.1);
+    color: var(--primary-color);
+}
+
+body.light-theme .accordion-button:not(.collapsed) {
+    background: rgba(102, 126, 234, 0.05);
+}
+
+.accordion-body {
+    background: rgba(0, 0, 0, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 20px 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.light-theme .accordion-body {
+    background: rgba(248, 249, 250, 0.5);
+    color: #666666;
+    border-top: 1px solid #e9ecef;
+}
+
+.accordion-body ul {
+    padding-left: 20px;
+}
+
+.accordion-body li {
+    margin-bottom: 8px;
+}
+
+/* Styles pour la section CTA */
+.contact-cta {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.light-theme .contact-cta {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e9ecef;
+}
+
+.contact-cta h3 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+body.light-theme .contact-cta h3 {
+    color: #333333;
+}
+
+.contact-cta p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+body.light-theme .contact-cta p {
+    color: #666666;
+}
+
+/* Styles pour les informations de contact */
+.contact-info-section {
+    background-color: #0a0a0a;
+}
+
+body.light-theme .contact-info-section {
+    background-color: #ffffff;
+}
+
+.contact-info-items {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 30px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.light-theme .contact-info-items {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e9ecef;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-info-items:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.contact-info-items .icon {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.contact-info-items:hover .icon {
+    transform: scale(1.1);
+}
+
+.contact-info-items h4 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+body.light-theme .contact-info-items h4 {
+    color: #333333;
+}
+
+.contact-info-items p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+body.light-theme .contact-info-items p {
+    color: #666666;
+}
+
+/* Styles pour le formulaire de contact */
+.contact-section {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+body.light-theme .contact-section {
+    background-color: #f8f9fa;
+}
+
+.contact-form-items {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.light-theme .contact-form-items {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e9ecef;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form-items h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+body.light-theme .contact-form-items h2 {
+    color: #333333;
+}
+
+.contact-form-items p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+body.light-theme .contact-form-items p {
+    color: #666666;
+}
+
+/* Styles pour les champs de formulaire */
+.form-clt {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-clt input,
+.form-clt textarea,
+.form-clt select {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+body.light-theme .form-clt input,
+body.light-theme .form-clt textarea,
+body.light-theme .form-clt select {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #e9ecef;
+    color: #333333;
+}
+
+.form-clt input:focus,
+.form-clt textarea:focus,
+.form-clt select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-clt textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.form-clt .icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+body.light-theme .form-clt .icon {
+    color: #6c757d;
+}
+
+/* Styles pour la carte Google Maps */
+.contact-map-items {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.google-map iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+/* Styles globaux pour le thème sombre */
+/* Thème sombre par défaut */
+body {
+    background-color: #0a0a0a;
+    color: #ffffff;
+}
+
+body.light-theme {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+body.light-theme .breadcrumb-wrapper,
+body.light-theme .section-bg,
+body.light-theme .footer-section {
+    background-color: #f8f9fa;
+}
+
+/* Bouton de thème */
+.theme-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.theme-toggle-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 50px;
+    padding: 12px 20px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.theme-toggle-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.theme-toggle-btn i {
+    font-size: 16px;
+}
+
+.theme-toggle-btn span {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .theme-toggle-btn span {
+        display: inline;
+    }
+}
+
+/* Supprimer l'espace en haut avec le cercle noir */
+#preloader {
+    display: none !important;
+}
+
+.preloader {
+    display: none !important;
+}
+
+/* Styles pour les sections */
+.about-section,
+.team-section {
+    background-color: #0a0a0a;
+}
+
+body.light-theme .about-section,
+body.light-theme .team-section {
+    background-color: #ffffff;
+}
+
+.service-section-2 {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+body.light-theme .service-section-2 {
+    background-color: #f8f9fa;
+}
+
+/* Styles pour les cartes */
+.service-card-items {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+body.light-theme .service-card-items {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e9ecef;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.service-card-items:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+body.light-theme .service-card-items:hover {
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.service-card-items h3 a {
+    color: #ffffff;
+}
+
+body.light-theme .service-card-items h3 a {
+    color: #333333;
+}
+
+.service-card-items p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+body.light-theme .service-card-items p {
+    color: #666666;
+}
+
+/* Styles pour l'équipe */
+.single-team-items {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+body.light-theme .single-team-items {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.single-team-items:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.team-content h3 {
+    color: #ffffff;
+}
+
+body.light-theme .team-content h3 {
+    color: #333333;
+}
+
+.team-content p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+body.light-theme .team-content p {
+    color: #666666;
+}
+
+/* Styles pour les sections */
+.section-title span {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+body.light-theme .section-title span {
+    color: #6c757d;
+}
+
+.section-title h2 {
+    color: #ffffff;
+}
+
+body.light-theme .section-title h2 {
+    color: #333333;
+}
+
+/* Styles pour les boutons */
+.theme-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+    background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+    transform: translateY(-2px);
+}
+
+/* Animations supplémentaires */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate__fadeInUp {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.animate__pulse {
+    animation: pulse 1s infinite;
+}
+
+.animate__bounceIn {
+    animation: bounceIn 0.8s ease-out;
+}

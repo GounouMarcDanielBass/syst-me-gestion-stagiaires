@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="assets/css/color.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pages.css">
 </head>
 <body>
     <div id="preloader">
@@ -30,8 +31,16 @@
     <!-- Header Include -->
     <header id="header-sticky" class="header-1" data-include></header>
 
+    <!-- Theme Switcher Button -->
+    <div class="theme-switcher">
+        <button id="theme-toggle" class="theme-toggle-btn" title="Changer de thème">
+            <i class="fas fa-moon"></i>
+            <span>Thème sombre</span>
+        </button>
+    </div>
+
     <!--<< Breadcrumb Section Start >>-->
-    <section class="breadcrumb-wrapper section-padding bg-cover" style="background-image: url('assets/img/hero/04.jpg');">
+    <section class="breadcrumb-wrapper section-padding bg-cover faq-breadcrumb">
         <div class="container">
             <div class="page-heading">
                 <h1 class="wow fadeInUp" data-wow-delay=".3s">Questions fréquentes</h1>
@@ -51,23 +60,87 @@
                 <span class="wow fadeInUp" data-wow-delay=".2s">Vos questions</span>
                 <h2 class="wow fadeInUp" data-wow-delay=".4s">Questions fréquemment posées</h2>
             </div>
+            <!-- FAQ Categories -->
+            <div class="faq-categories text-center mb-5 wow fadeInUp" data-wow-delay=".8s">
+                <button class="btn btn-outline-primary me-2 mb-2 active" data-category="all">Toutes</button>
+                <button class="btn btn-outline-primary me-2 mb-2" data-category="inscription">Inscription</button>
+                <button class="btn btn-outline-primary me-2 mb-2" data-category="stages">Stages</button>
+                <button class="btn btn-outline-primary me-2 mb-2" data-category="documents">Documents</button>
+                <button class="btn btn-outline-primary me-2 mb-2" data-category="technique">Support</button>
+            </div>
+
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="faq-accordion mt-4">
                         <div class="accordion" id="accordion">
-                            <div class="accordion-item wow fadeInUp" data-wow-delay=".3s">
+                            <div class="accordion-item wow fadeInUp faq-item" data-wow-delay=".3s" data-category="inscription">
                                 <h5 class="accordion-header" id="faq1">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqBody1">
-                                        Comment m'inscrire sur la plateforme ?
+                                        <i class="fas fa-user-plus me-2"></i>Comment m'inscrire sur la plateforme ?
                                     </button>
                                 </h5>
                                 <div id="faqBody1" class="accordion-collapse collapse" data-bs-parent="#accordion">
                                     <div class="accordion-body">
-                                        Cliquez sur "Créer un compte", choisissez votre rôle et remplissez le formulaire.
+                                        Pour vous inscrire, cliquez sur "Créer un compte" dans le menu principal. Choisissez votre rôle (Étudiant, Entreprise, ou Encadrant), puis remplissez le formulaire d'inscription avec vos informations personnelles. Un email de confirmation vous sera envoyé pour activer votre compte.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item wow fadeInUp faq-item" data-wow-delay=".4s" data-category="stages">
+                                <h5 class="accordion-header" id="faq2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqBody2">
+                                        <i class="fas fa-search me-2"></i>Comment rechercher des offres de stage ?
+                                    </button>
+                                </h5>
+                                <div id="faqBody2" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                                    <div class="accordion-body">
+                                        <p>Utilisez notre moteur de recherche avancé sur la page "Offres de stage". Vous pouvez filtrer par :</p>
+                                        <ul>
+                                            <li>Mots-clés (poste, compétences requises)</li>
+                                            <li>Domaine d'activité</li>
+                                            <li>Localisation (ville ou télétravail)</li>
+                                            <li>Durée du stage</li>
+                                            <li>Niveau d'études requis</li>
+                                            <li>Rémunération</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item wow fadeInUp faq-item" data-wow-delay=".5s" data-category="documents">
+                                <h5 class="accordion-header" id="faq3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqBody3">
+                                        <i class="fas fa-file-upload me-2"></i>Quels documents dois-je fournir ?
+                                    </button>
+                                </h5>
+                                <div id="faqBody3" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                                    <div class="accordion-body">
+                                        <p>Les documents généralement requis sont :</p>
+                                        <ul>
+                                            <li><strong>CV à jour</strong> (format PDF recommandé)</li>
+                                            <li><strong>Lettre de motivation</strong> personnalisée</li>
+                                            <li><strong>Convention de stage</strong> (générée automatiquement)</li>
+                                            <li><strong>Rapports de stage</strong> (intermédiaire et final)</li>
+                                            <li><strong>Évaluations</strong> et attestations</li>
+                                        </ul>
+                                        <p>Tous les documents sont stockés de manière sécurisée et confidentielle.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact CTA -->
+            <div class="row mt-5 wow fadeInUp" data-wow-delay=".7s">
+                <div class="col-lg-12 text-center">
+                    <div class="contact-cta">
+                        <h3>Vous n'avez pas trouvé la réponse à votre question ?</h3>
+                        <p>Contactez notre équipe support qui se fera un plaisir de vous aider.</p>
+                        <a href="contact.html" class="theme-btn">
+                            <span>Nous contacter <i class="fas fa-arrow-right ms-2"></i></span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -77,8 +150,118 @@
     <!-- Footer Include -->
     <footer class="footer-section section-bg fix" data-include></footer>
 
-    <!-- Include Footer Scripts -->
+    <!-- All Scripts -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/counter.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/ScrollToPlugin.min.js"></script>
+    <script src="assets/js/ScrollSmoother.min.js"></script>
+    <script src="assets/js/SplitText.min.js"></script>
+    <script src="assets/js/chroma.min.js"></script>
+    <script src="assets/js/mixitup.min.js"></script>
+    <script src="assets/js/vanilla-tilt.js"></script>
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/includes.js"></script>
+
+    <!-- Theme Switcher and FAQ Scripts -->
+    <script>
+        $(document).ready(function() {
+            // Initialize WOW animations
+            if (typeof WOW !== 'undefined') {
+                new WOW().init();
+            }
+
+            // Theme Switcher Functionality
+            const themeToggle = $('#theme-toggle');
+            const themeIcon = themeToggle.find('i');
+            const themeText = themeToggle.find('span');
+
+            // Check for saved theme preference or default to dark
+            const currentTheme = localStorage.getItem('theme') || 'dark';
+            if (currentTheme === 'light') {
+                $('body').addClass('light-theme');
+                themeIcon.removeClass('fa-moon').addClass('fa-sun');
+                themeText.text('Thème clair');
+            } else {
+                $('body').removeClass('light-theme');
+                themeIcon.removeClass('fa-sun').addClass('fa-moon');
+                themeText.text('Thème sombre');
+            }
+
+            themeToggle.on('click', function() {
+                $('body').toggleClass('light-theme');
+                const isLight = $('body').hasClass('light-theme');
+
+                if (isLight) {
+                    themeIcon.removeClass('fa-moon').addClass('fa-sun');
+                    themeText.text('Thème clair');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    themeIcon.removeClass('fa-sun').addClass('fa-moon');
+                    themeText.text('Thème sombre');
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+
+            // FAQ Filtering
+            $('.faq-categories button').on('click', function() {
+                const category = $(this).data('category');
+
+                // Update active button
+                $('.faq-categories button').removeClass('active');
+                $(this).addClass('active');
+
+                // Filter FAQ items
+                if (category === 'all') {
+                    $('.faq-item').show();
+                } else {
+                    $('.faq-item').hide();
+                    $('.faq-item[data-category="' + category + '"]').show();
+                }
+            });
+
+            // Add more animations
+            $('.accordion-item').hover(
+                function() {
+                    $(this).addClass('animate__pulse');
+                },
+                function() {
+                    $(this).removeClass('animate__pulse');
+                }
+            );
+
+            $('.contact-cta').hover(
+                function() {
+                    $(this).addClass('animate__bounceIn');
+                },
+                function() {
+                    $(this).removeClass('animate__bounceIn');
+                }
+            );
+
+            // Scroll animations
+            $(window).scroll(function() {
+                $('.section-title').each(function() {
+                    const elementTop = $(this).offset().top;
+                    const elementBottom = elementTop + $(this).outerHeight();
+                    const viewportTop = $(window).scrollTop();
+                    const viewportBottom = viewportTop + $(window).height();
+
+                    if (elementBottom > viewportTop && elementTop < viewportBottom) {
+                        $(this).addClass('animate__fadeInUp');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
 

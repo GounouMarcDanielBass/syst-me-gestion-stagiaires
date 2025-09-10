@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="assets/css/color.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pages.css">
 </head>
 <body>
     <div id="preloader">
@@ -30,8 +31,16 @@
     <!-- Header Include -->
     <header id="header-sticky" class="header-1" data-include></header>
 
+    <!-- Theme Switcher Button -->
+    <div class="theme-switcher">
+        <button id="theme-toggle" class="theme-toggle-btn" title="Changer de thème">
+            <i class="fas fa-moon"></i>
+            <span>Thème sombre</span>
+        </button>
+    </div>
+
     <!--<< Breadcrumb Section Start >>-->
-    <section class="breadcrumb-wrapper section-padding bg-cover" style="background-image: url('assets/img/hero/03.jpg');">
+    <section class="breadcrumb-wrapper section-padding bg-cover contact-breadcrumb">
         <div class="container">
             <div class="page-heading">
                 <h1 class="wow fadeInUp" data-wow-delay=".3s">Nous contacter</h1>
@@ -188,7 +197,128 @@
     <!-- Footer Include -->
     <footer class="footer-section section-bg fix" data-include></footer>
 
-    <!-- Include Footer Scripts -->
+    <!-- All Scripts -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/counter.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/ScrollToPlugin.min.js"></script>
+    <script src="assets/js/ScrollSmoother.min.js"></script>
+    <script src="assets/js/SplitText.min.js"></script>
+    <script src="assets/js/chroma.min.js"></script>
+    <script src="assets/js/mixitup.min.js"></script>
+    <script src="assets/js/vanilla-tilt.js"></script>
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/includes.js"></script>
+
+    <!-- Theme Switcher Script -->
+    <script>
+        $(document).ready(function() {
+            // Initialize WOW animations
+            if (typeof WOW !== 'undefined') {
+                new WOW().init();
+            }
+
+            // Theme Switcher Functionality
+            const themeToggle = $('#theme-toggle');
+            const themeIcon = themeToggle.find('i');
+            const themeText = themeToggle.find('span');
+
+            // Check for saved theme preference or default to dark
+            const currentTheme = localStorage.getItem('theme') || 'dark';
+            if (currentTheme === 'light') {
+                $('body').addClass('light-theme');
+                themeIcon.removeClass('fa-moon').addClass('fa-sun');
+                themeText.text('Thème clair');
+            } else {
+                $('body').removeClass('light-theme');
+                themeIcon.removeClass('fa-sun').addClass('fa-moon');
+                themeText.text('Thème sombre');
+            }
+
+            themeToggle.on('click', function() {
+                $('body').toggleClass('light-theme');
+                const isLight = $('body').hasClass('light-theme');
+
+                if (isLight) {
+                    themeIcon.removeClass('fa-moon').addClass('fa-sun');
+                    themeText.text('Thème clair');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    themeIcon.removeClass('fa-sun').addClass('fa-moon');
+                    themeText.text('Thème sombre');
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+
+            // Add more animations
+            $('.contact-info-items').hover(
+                function() {
+                    $(this).addClass('animate__pulse');
+                },
+                function() {
+                    $(this).removeClass('animate__pulse');
+                }
+            );
+
+            $('.form-clt').hover(
+                function() {
+                    $(this).addClass('animate__bounceIn');
+                },
+                function() {
+                    $(this).removeClass('animate__bounceIn');
+                }
+            );
+
+            // Form validation
+            $('#contact-form').on('submit', function(e) {
+                e.preventDefault();
+
+                const formData = {
+                    name: $('#name').val(),
+                    email: $('#email').val(),
+                    phone: $('#phone').val(),
+                    subject: $('#subject').val(),
+                    message: $('#message').val()
+                };
+
+                // Simple validation
+                if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+                    alert('Veuillez remplir tous les champs obligatoires.');
+                    return;
+                }
+
+                // Simulate form submission
+                alert('Message envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.');
+                this.reset();
+
+                // Reset nice select
+                if ($.fn.niceSelect) {
+                    $('select').niceSelect('update');
+                }
+            });
+
+            // Scroll animations
+            $(window).scroll(function() {
+                $('.contact-content').each(function() {
+                    const elementTop = $(this).offset().top;
+                    const elementBottom = elementTop + $(this).outerHeight();
+                    const viewportTop = $(window).scrollTop();
+                    const viewportBottom = viewportTop + $(window).height();
+
+                    if (elementBottom > viewportTop && elementTop < viewportBottom) {
+                        $(this).addClass('animate__fadeInUp');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
