@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../assets/css/color.css">
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/pages.css">
 </head>
 <body>
     <div id="preloader">
@@ -31,7 +32,7 @@
     <header id="header-sticky" class="header-1" data-include></header>
 
 <!--<< Breadcrumb Section Start >>-->
-<section class="breadcrumb-wrapper section-padding bg-cover" style="background-image: url('../assets/img/hero/05.jpg');">
+<section class="breadcrumb-wrapper section-padding bg-cover suivi-breadcrumb">
     <div class="container">
         <div class="page-heading">
             <h1 class="wow fadeInUp" data-wow-delay=".3s">Suivi des Stages</h1>
@@ -259,138 +260,80 @@
 
 <footer class="footer-section section-bg fix" data-include></footer>
 
-<style>
-.info-card {
-    text-align: center;
-    padding: 1.5rem;
-    background: #f8f9fa;
-    border-radius: 8px;
-    height: 100%;
-}
 
-.info-card i {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.info-card h5 {
-    margin-bottom: 0.5rem;
-    color: #333;
-}
-
-.timeline-container {
-    position: relative;
-    padding-left: 2rem;
-}
-
-.timeline-container::before {
-    content: '';
-    position: absolute;
-    left: 1rem;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: #e9ecef;
-}
-
-.timeline-item {
-    position: relative;
-    margin-bottom: 2rem;
-    padding-left: 2rem;
-}
-
-.timeline-marker {
-    position: absolute;
-    left: -2rem;
-    top: 0;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-}
-
-.timeline-item.completed .timeline-marker {
-    background: #28a745;
-}
-
-.timeline-item.active .timeline-marker {
-    background: #ffc107;
-    color: #333;
-}
-
-.timeline-item.pending .timeline-marker {
-    background: #6c757d;
-}
-
-.task-item {
-    display: flex;
-    justify-content: between;
-    align-items: center;
-    padding: 1rem;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    border-left: 4px solid;
-}
-
-.task-item.urgent {
-    background: #fff5f5;
-    border-color: #dc3545;
-}
-
-.task-item.normal {
-    background: #f8f9fa;
-    border-color: #007bff;
-}
-
-.task-item.completed {
-    background: #f0f8f0;
-    border-color: #28a745;
-    opacity: 0.8;
-}
-
-.task-info {
-    flex: 1;
-}
-
-.task-info h5 {
-    margin-bottom: 0.25rem;
-}
-
-.task-info p {
-    margin-bottom: 0.25rem;
-    color: #666;
-}
-
-.report-item {
-    border: 1px solid #e9ecef;
-    border-radius: 8px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
-
-.report-header {
-    display: flex;
-    justify-content: between;
-    align-items: center;
-    margin-bottom: 0.75rem;
-}
-
-.report-header h5 {
-    margin: 0;
-}
-
-.report-actions {
-    margin-top: 0.75rem;
-    display: flex;
-    gap: 0.5rem;
-}
-</style>
-
-    <!-- Include Footer Scripts -->
+    <!-- All Scripts -->
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+    <script src="../assets/js/counter.js"></script>
+    <script src="../assets/js/gsap.min.js"></script>
+    <script src="../assets/js/ScrollTrigger.min.js"></script>
+    <script src="../assets/js/ScrollToPlugin.min.js"></script>
+    <script src="../assets/js/ScrollSmoother.min.js"></script>
+    <script src="../assets/js/SplitText.min.js"></script>
+    <script src="../assets/js/chroma.min.js"></script>
+    <script src="../assets/js/mixitup.min.js"></script>
+    <script src="../assets/js/vanilla-tilt.js"></script>
+    <script src="../assets/js/jquery.meanmenu.min.js"></script>
+    <script src="../assets/js/magnific-popup.min.js"></script>
+    <script src="../assets/js/jquery.nice-select.min.js"></script>
+    <script src="../assets/js/wow.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../js/main.js"></script>
     <script src="../js/includes.js"></script>
+    
+    <!-- Initialisation des scripts pour cette page -->
+    <script>
+        $(document).ready(function() {
+            // Réinitialiser WOW.js pour les animations
+            if (typeof WOW !== 'undefined') {
+                new WOW().init();
+            }
+            
+            // Rendre les boutons cliquables
+            $('.btn').on('click', function(e) {
+                e.preventDefault();
+                const buttonText = $(this).text().trim();
+                
+                if (buttonText === 'Téléverser') {
+                    alert('Téléversement du rapport intermédiaire');
+                } else if (buttonText === 'Confirmer') {
+                    alert('Rendez-vous confirmé');
+                    $(this).removeClass('btn-outline-success').addClass('btn-success').text('Confirmé');
+                } else if (buttonText === 'Voir détails') {
+                    alert('Détails du rapport hebdomadaire');
+                } else if (buttonText === 'Télécharger') {
+                    alert('Téléchargement du rapport');
+                } else if (buttonText === 'Modifier') {
+                    alert('Modification du rapport');
+                } else if (buttonText === 'Commentaires') {
+                    alert('Commentaires sur le rapport');
+                } else if (buttonText === 'Commencer') {
+                    alert('Commencer la rédaction du rapport');
+                    $(this).removeClass('btn-primary').addClass('btn-outline-primary').text('Sauvegarder');
+                }
+            });
+            
+            // Animation de la timeline
+            $('.timeline-item').each(function(index) {
+                $(this).addClass('wow fadeInLeft').attr('data-wow-delay', (0.2 * index) + 's');
+            });
+            
+            // Animation des cartes d'information
+            $('.info-card').each(function(index) {
+                $(this).addClass('wow fadeInUp').attr('data-wow-delay', (0.1 * index) + 's');
+            });
+            
+            // Animation des tâches
+            $('.task-item').each(function(index) {
+                $(this).addClass('wow fadeInRight').attr('data-wow-delay', (0.1 * index) + 's');
+            });
+            
+            // Animation des rapports
+            $('.report-item').each(function(index) {
+                $(this).addClass('wow fadeInUp').attr('data-wow-delay', (0.1 * index) + 's');
+            });
+        });
+    </script>
 </body>
 </html>

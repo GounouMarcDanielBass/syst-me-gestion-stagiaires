@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../assets/css/color.css">
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/pages.css">
 </head>
 <body>
     <div id="preloader">
@@ -31,7 +32,7 @@
     <header id="header-sticky" class="header-1" data-include></header>
 
 <!--<< Breadcrumb Section Start >>-->
-<section class="breadcrumb-wrapper section-padding bg-cover" style="background-image: url('../assets/img/hero/01.jpg');">
+<section class="breadcrumb-wrapper section-padding bg-cover offres-breadcrumb">
     <div class="container">
         <div class="page-heading">
             <h1 class="wow fadeInUp" data-wow-delay=".3s">Offres de Stage</h1>
@@ -67,7 +68,7 @@
                             </div>
                             <div class="col-lg-3">
                                 <div class="form-clt">
-                                    <select class="nice-select">
+                                    <select class="nice-select" title="Sélectionner un domaine" aria-label="Domaine d'activité">
                                         <option value="">Tous les domaines</option>
                                         <option value="informatique">Informatique</option>
                                         <option value="marketing">Marketing</option>
@@ -80,7 +81,7 @@
                             </div>
                             <div class="col-lg-3">
                                 <div class="form-clt">
-                                    <select class="nice-select">
+                                    <select class="nice-select" title="Sélectionner une ville" aria-label="Ville">
                                         <option value="">Toutes les villes</option>
                                         <option value="paris">Paris</option>
                                         <option value="lyon">Lyon</option>
@@ -97,32 +98,155 @@
                                 </button>
                             </div>
                         </div>
+                        
+                        <!-- Filtres avancés -->
+                        <div class="advanced-filters mt-4 wow fadeInUp" data-wow-delay=".9s">
+                            <div class="filter-toggle">
+                                <a href="#" class="filter-btn" data-bs-toggle="collapse" data-bs-target="#advancedFilters" title="Afficher/masquer les filtres avancés" aria-label="Filtres avancés">
+                                    <i class="fas fa-sliders-h me-2"></i>Filtres avancés
+                                </a>
+                            </div>
+                            <div class="collapse" id="advancedFilters">
+                                <div class="card card-body mt-3">
+                                    <div class="row g-3">
+                                        <div class="col-lg-3">
+                                            <div class="form-clt">
+                                                <select class="nice-select" title="Sélectionner une durée" aria-label="Durée du stage">
+                                                    <option value="">Durée du stage</option>
+                                                    <option value="1-2">1-2 mois</option>
+                                                    <option value="3-4">3-4 mois</option>
+                                                    <option value="5-6">5-6 mois</option>
+                                                    <option value="6+">Plus de 6 mois</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-clt">
+                                                <select class="nice-select" title="Sélectionner un niveau d'études" aria-label="Niveau d'études">
+                                                    <option value="">Niveau d'études</option>
+                                                    <option value="bac+2">Bac+2</option>
+                                                    <option value="bac+3">Bac+3 (Licence)</option>
+                                                    <option value="bac+4">Bac+4</option>
+                                                    <option value="bac+5">Bac+5 (Master)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-clt">
+                                                <select class="nice-select" title="Sélectionner une rémunération" aria-label="Rémunération">
+                                                    <option value="">Rémunération</option>
+                                                    <option value="stage_gratifie">Stage gratifié</option>
+                                                    <option value="600-800">600€ - 800€</option>
+                                                    <option value="800-1000">800€ - 1000€</option>
+                                                    <option value="1000+">Plus de 1000€</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-clt">
+                                                <select class="nice-select" title="Sélectionner une date de début" aria-label="Date de début">
+                                                    <option value="">Date de début</option>
+                                                    <option value="immediate">Immédiat</option>
+                                                    <option value="1month">Dans 1 mois</option>
+                                                    <option value="3month">Dans 3 mois</option>
+                                                    <option value="6month">Dans 6 mois</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-12">
+                                            <div class="filter-tags">
+                                                <span class="filter-label">Compétences recherchées:</span>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="skill1" value="javascript">
+                                                    <label class="form-check-label" for="skill1">JavaScript</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="skill2" value="python">
+                                                    <label class="form-check-label" for="skill2">Python</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="skill3" value="php">
+                                                    <label class="form-check-label" for="skill3">PHP</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="skill4" value="java">
+                                                    <label class="form-check-label" for="skill4">Java</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="skill5" value="design">
+                                                    <label class="form-check-label" for="skill5">Design</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Statistiques des offres -->
+        <div class="row mb-5 wow fadeInUp" data-wow-delay=".5s">
+            <div class="col-lg-12">
+                <div class="offers-stats">
+                    <div class="stats-wrapper d-flex justify-content-between align-items-center flex-wrap">
+                        <div class="stats-info">
+                            <h4>156 offres de stage trouvées</h4>
+                            <p>Mise à jour: <span class="text-primary">Aujourd'hui à 09:45</span></p>
+                        </div>
+                        <div class="stats-actions d-flex align-items-center">
+                            <div class="view-toggle me-3">
+                                <button class="btn btn-sm btn-outline-secondary active" title="Vue grille">
+                                    <i class="fas fa-th"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-secondary" title="Vue liste">
+                                    <i class="fas fa-list"></i>
+                                </button>
+                            </div>
+                            <div class="sort-options">
+                                <select class="nice-select" title="Options de tri" aria-label="Trier par">
+                                    <option value="recent">Plus récentes</option>
+                                    <option value="old">Plus anciennes</option>
+                                    <option value="az">A à Z</option>
+                                    <option value="za">Z à A</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!--<< Offers Grid >>-->
         <div class="row g-4">
-            <div class="col-xl-4 col-lg-6 col-md-6">
+            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                 <div class="single-service-items">
                     <div class="service-image">
                         <img src="../assets/img/service/details-1.jpg" alt="service-img">
+                        <span class="offer-badge hot">Populaire</span>
                         <div class="service-content">
                             <div class="icon">
                                 <i class="fas fa-code"></i>
                             </div>
                             <div class="content">
                                 <h3><a href="#">Développeur Frontend React</a></h3>
-                                <p>TechCorp - Paris</p>
+                                <p><i class="fas fa-building me-1"></i>TechCorp - <i class="fas fa-map-marker-alt me-1"></i>Paris</p>
                                 <div class="service-meta">
                                     <span class="duration"><i class="fas fa-calendar me-1"></i>3-6 mois</span>
                                     <span class="level"><i class="fas fa-graduation-cap me-1"></i>Master</span>
+                                    <span class="salary"><i class="fas fa-euro-sign me-1"></i>800€/mois</span>
                                 </div>
                                 <div class="service-tags mt-2">
                                     <span class="badge bg-primary">React</span>
                                     <span class="badge bg-secondary">JavaScript</span>
                                     <span class="badge bg-info">CSS</span>
+                                </div>
+                                <div class="offer-description mt-2">
+                                    <p>Développement d'interfaces utilisateur réactives et optimisation des performances front-end...</p>
                                 </div>
                                 <div class="service-footer mt-3">
                                     <div class="d-flex justify-content-between align-items-center">
@@ -143,25 +267,30 @@
                 </div>
             </div>
 
-            <div class="col-xl-4 col-lg-6 col-md-6">
+            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
                 <div class="single-service-items">
                     <div class="service-image">
                         <img src="../assets/img/service/details-2.jpg" alt="service-img">
+                        <span class="offer-badge new">Nouveau</span>
                         <div class="service-content">
                             <div class="icon">
                                 <i class="fas fa-palette"></i>
                             </div>
                             <div class="content">
                                 <h3><a href="#">Designer UX/UI</a></h3>
-                                <p>CreativeStudio - Lyon</p>
+                                <p><i class="fas fa-building me-1"></i>CreativeStudio - <i class="fas fa-map-marker-alt me-1"></i>Lyon</p>
                                 <div class="service-meta">
                                     <span class="duration"><i class="fas fa-calendar me-1"></i>4 mois</span>
                                     <span class="level"><i class="fas fa-graduation-cap me-1"></i>Master</span>
+                                    <span class="salary"><i class="fas fa-euro-sign me-1"></i>700€/mois</span>
                                 </div>
                                 <div class="service-tags mt-2">
                                     <span class="badge bg-primary">Figma</span>
                                     <span class="badge bg-secondary">Photoshop</span>
                                     <span class="badge bg-info">UX Research</span>
+                                </div>
+                                <div class="offer-description mt-2">
+                                    <p>Conception d'interfaces utilisateur intuitives et réalisation de tests d'utilisabilité...</p>
                                 </div>
                                 <div class="service-footer mt-3">
                                     <div class="d-flex justify-content-between align-items-center">
@@ -182,7 +311,7 @@
                 </div>
             </div>
 
-            <div class="col-xl-4 col-lg-6 col-md-6">
+            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
                 <div class="single-service-items">
                     <div class="service-image">
                         <img src="../assets/img/service/details-3.jpg" alt="service-img">
@@ -192,15 +321,19 @@
                             </div>
                             <div class="content">
                                 <h3><a href="#">Analyste Marketing Digital</a></h3>
-                                <p>DigitalWave - Marseille</p>
+                                <p><i class="fas fa-building me-1"></i>DigitalWave - <i class="fas fa-map-marker-alt me-1"></i>Marseille</p>
                                 <div class="service-meta">
                                     <span class="duration"><i class="fas fa-calendar me-1"></i>5 mois</span>
                                     <span class="level"><i class="fas fa-graduation-cap me-1"></i>Master</span>
+                                    <span class="salary"><i class="fas fa-euro-sign me-1"></i>850€/mois</span>
                                 </div>
                                 <div class="service-tags mt-2">
                                     <span class="badge bg-primary">Google Analytics</span>
                                     <span class="badge bg-secondary">SEO</span>
                                     <span class="badge bg-info">Social Media</span>
+                                </div>
+                                <div class="offer-description mt-2">
+                                    <p>Analyse des performances marketing et optimisation des stratégies digitales...</p>
                                 </div>
                                 <div class="service-footer mt-3">
                                     <div class="d-flex justify-content-between align-items-center">
@@ -221,25 +354,30 @@
                 </div>
             </div>
 
-            <div class="col-xl-4 col-lg-6 col-md-6">
+            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                 <div class="single-service-items">
                     <div class="service-image">
                         <img src="../assets/img/service/details-4.jpg" alt="service-img">
+                        <span class="offer-badge featured">Vedette</span>
                         <div class="service-content">
                             <div class="icon">
                                 <i class="fas fa-database"></i>
                             </div>
                             <div class="content">
                                 <h3><a href="#">Data Scientist</a></h3>
-                                <p>InnovLab - Paris</p>
+                                <p><i class="fas fa-building me-1"></i>InnovLab - <i class="fas fa-map-marker-alt me-1"></i>Paris</p>
                                 <div class="service-meta">
                                     <span class="duration"><i class="fas fa-calendar me-1"></i>6 mois</span>
                                     <span class="level"><i class="fas fa-graduation-cap me-1"></i>Master</span>
+                                    <span class="salary"><i class="fas fa-euro-sign me-1"></i>1100€/mois</span>
                                 </div>
                                 <div class="service-tags mt-2">
                                     <span class="badge bg-primary">Python</span>
                                     <span class="badge bg-secondary">Machine Learning</span>
                                     <span class="badge bg-info">SQL</span>
+                                </div>
+                                <div class="offer-description mt-2">
+                                    <p>Développement d'algorithmes d'apprentissage automatique et analyse de données massives...</p>
                                 </div>
                                 <div class="service-footer mt-3">
                                     <div class="d-flex justify-content-between align-items-center">
@@ -260,7 +398,7 @@
                 </div>
             </div>
 
-            <div class="col-xl-4 col-lg-6 col-md-6">
+            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
                 <div class="single-service-items">
                     <div class="service-image">
                         <img src="../assets/img/service/details-5.jpg" alt="service-img">
@@ -270,15 +408,19 @@
                             </div>
                             <div class="content">
                                 <h3><a href="#">Assistant Contrôleur de Gestion</a></h3>
-                                <p>FinanceFirst - Toulouse</p>
+                                <p><i class="fas fa-building me-1"></i>FinanceFirst - <i class="fas fa-map-marker-alt me-1"></i>Toulouse</p>
                                 <div class="service-meta">
                                     <span class="duration"><i class="fas fa-calendar me-1"></i>4 mois</span>
                                     <span class="level"><i class="fas fa-graduation-cap me-1"></i>Master</span>
+                                    <span class="salary"><i class="fas fa-euro-sign me-1"></i>750€/mois</span>
                                 </div>
                                 <div class="service-tags mt-2">
                                     <span class="badge bg-primary">Excel</span>
                                     <span class="badge bg-secondary">SAP</span>
                                     <span class="badge bg-info">Comptabilité</span>
+                                </div>
+                                <div class="offer-description mt-2">
+                                    <p>Participation à l'élaboration des budgets et analyse des écarts financiers...</p>
                                 </div>
                                 <div class="service-footer mt-3">
                                     <div class="d-flex justify-content-between align-items-center">
@@ -299,25 +441,30 @@
                 </div>
             </div>
 
-            <div class="col-xl-4 col-lg-6 col-md-6">
+            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
                 <div class="single-service-items">
                     <div class="service-image">
                         <img src="../assets/img/hero/02.jpg" alt="service-img">
+                        <span class="offer-badge urgent">Urgent</span>
                         <div class="service-content">
                             <div class="icon">
                                 <i class="fas fa-users"></i>
                             </div>
                             <div class="content">
                                 <h3><a href="#">Assistant RH</a></h3>
-                                <p>HumanCorp - Nantes</p>
+                                <p><i class="fas fa-building me-1"></i>HumanCorp - <i class="fas fa-map-marker-alt me-1"></i>Nantes</p>
                                 <div class="service-meta">
                                     <span class="duration"><i class="fas fa-calendar me-1"></i>3 mois</span>
                                     <span class="level"><i class="fas fa-graduation-cap me-1"></i>Licence</span>
+                                    <span class="salary"><i class="fas fa-euro-sign me-1"></i>650€/mois</span>
                                 </div>
                                 <div class="service-tags mt-2">
                                     <span class="badge bg-primary">Recrutement</span>
                                     <span class="badge bg-secondary">SIRH</span>
                                     <span class="badge bg-info">Communication</span>
+                                </div>
+                                <div class="offer-description mt-2">
+                                    <p>Participation aux processus de recrutement et gestion administrative du personnel...</p>
                                 </div>
                                 <div class="service-footer mt-3">
                                     <div class="d-flex justify-content-between align-items-center">
@@ -344,12 +491,12 @@
             <div class="col-lg-12">
                 <div class="page-nav-wrap text-center wow fadeInUp" data-wow-delay=".3s">
                     <ul>
-                        <li><a class="page-numbers" href="#"><i class="fa-solid fa-arrow-left-long"></i></a></li>
+                        <li><a class="page-numbers" href="#" title="Page précédente" aria-label="Page précédente"><i class="fa-solid fa-arrow-left-long"></i></a></li>
                         <li><a class="page-numbers active" href="#">01</a></li>
                         <li><a class="page-numbers" href="#">02</a></li>
                         <li><a class="page-numbers" href="#">03</a></li>
                         <li><a class="page-numbers" href="#">04</a></li>
-                        <li><a class="page-numbers" href="#"><i class="fa-solid fa-arrow-right-long"></i></a></li>
+                        <li><a class="page-numbers" href="#" title="Page suivante" aria-label="Page suivante"><i class="fa-solid fa-arrow-right-long"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -359,43 +506,61 @@
 
 <footer class="footer-section section-bg fix" data-include></footer>
 
-<style>
-.service-meta {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 0.5rem;
-}
 
-.service-meta span {
-    font-size: 0.875rem;
-    color: #666;
-}
-
-.service-tags .badge {
-    margin-right: 0.25rem;
-    margin-bottom: 0.25rem;
-}
-
-.service-footer {
-    border-top: 1px solid #e9ecef;
-    padding-top: 1rem;
-}
-
-.service-actions {
-    display: flex;
-    gap: 0.25rem;
-}
-
-.search-form .form-clt {
-    position: relative;
-}
-
-.search-form .nice-select {
-    width: 100%;
-}
-</style>
-
-    <!-- Include Footer Scripts -->
+    <!-- All Scripts -->
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+    <script src="../assets/js/counter.js"></script>
+    <script src="../assets/js/gsap.min.js"></script>
+    <script src="../assets/js/ScrollTrigger.min.js"></script>
+    <script src="../assets/js/ScrollToPlugin.min.js"></script>
+    <script src="../assets/js/ScrollSmoother.min.js"></script>
+    <script src="../assets/js/SplitText.min.js"></script>
+    <script src="../assets/js/chroma.min.js"></script>
+    <script src="../assets/js/mixitup.min.js"></script>
+    <script src="../assets/js/vanilla-tilt.js"></script>
+    <script src="../assets/js/jquery.meanmenu.min.js"></script>
+    <script src="../assets/js/magnific-popup.min.js"></script>
+    <script src="../assets/js/jquery.nice-select.min.js"></script>
+    <script src="../assets/js/wow.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../js/main.js"></script>
     <script src="../js/includes.js"></script>
+    
+    <!-- Initialisation des scripts pour cette page -->
+    <script>
+        $(document).ready(function() {
+            // Réinitialiser Nice Select après le chargement du DOM
+            setTimeout(function() {
+                if ($.fn.niceSelect) {
+                    $('select').niceSelect();
+                }
+                
+                // Réinitialiser WOW.js pour les animations
+                if (typeof WOW !== 'undefined') {
+                    new WOW().init();
+                }
+                
+                // Rendre les boutons cliquables
+                $('.btn').on('click', function(e) {
+                    e.preventDefault();
+                    const action = $(this).attr('title');
+                    if (action === 'Voir détails') {
+                        alert('Détails de l\'offre de stage');
+                    } else if (action === 'Postuler') {
+                        window.location.href = 'candidatures.html?action=new';
+                    }
+                });
+                
+                // Style des cartes au survol
+                $('.single-service-items').hover(function() {
+                    $(this).addClass('service-hover');
+                }, function() {
+                    $(this).removeClass('service-hover');
+                });
+            }, 1000); // Délai pour s'assurer que tout est chargé
+        });
+    </script>
 </body>
 </html>
